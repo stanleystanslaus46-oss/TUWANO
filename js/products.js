@@ -23,9 +23,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/products/gold_cuban_chain.jpg",
-      "/assets/images/collections/collection_gold.jpg",
-      "/assets/images/editorial/hero_jewellery.jpg"
+      "/assets/images/products/gold_cuban_chain.jpg"
     ],
     tags: ["Gold", "Chains", "Necklaces", "Bestseller", "Classic"]
   },
@@ -48,8 +46,7 @@ export const PRODUCTS = [
     availability: "Available for Custom Sizing",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/products/diamond_gold_ring.jpg",
-      "/assets/images/collections/collection_gold.jpg"
+      "/assets/images/products/diamond_gold_ring.jpg"
     ],
     tags: ["Gold", "Rings", "Solitaire", "Engagement", "Featured"]
   },
@@ -72,8 +69,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/products/gold_hoop_earrings.jpg",
-      "/assets/images/piercing/piercing_curated_ear.jpg"
+      "/assets/images/products/gold_hoop_earrings.jpg"
     ],
     tags: ["Gold", "Earrings", "Hoops", "New Arrival", "Bestseller"]
   },
@@ -96,8 +92,7 @@ export const PRODUCTS = [
     availability: "In Stock at Mori",
     stores: ["Mori"],
     images: [
-      "/assets/images/products/silver_cuff_bangle.jpg",
-      "/assets/images/collections/collection_silver.jpg"
+      "/assets/images/products/silver_cuff_bangle.jpg"
     ],
     tags: ["Silver", "Bracelets", "Cuffs", "Contemporary", "Featured"]
   },
@@ -121,8 +116,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani",
     stores: ["Madukani"],
     images: [
-      "/assets/images/collections/collection_gold.jpg",
-      "/assets/images/editorial/hero_jewellery.jpg"
+
     ],
     tags: ["Gold", "Bracelets", "Herringbone", "Statement"]
   },
@@ -146,7 +140,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/collections/collection_silver.jpg"
+
     ],
     tags: ["Silver", "Chains", "Necklaces", "Men", "Unisex"]
   },
@@ -191,8 +185,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani",
     stores: ["Madukani"],
     images: [
-      "/assets/images/products/diamond_gold_ring.jpg",
-      "/assets/images/collections/collection_gold.jpg"
+
     ],
     tags: ["Gold", "Rings", "Signet", "Customizable", "Heirloom"]
   },
@@ -215,8 +208,7 @@ export const PRODUCTS = [
     availability: "Available at Madukani & Mori Piercing Studios",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/piercing/piercing_curated_ear.jpg",
-      "/assets/images/products/gold_hoop_earrings.jpg"
+
     ],
     tags: ["Piercing", "Gold", "Earrings", "Studs", "Studio"]
   },
@@ -239,8 +231,7 @@ export const PRODUCTS = [
     availability: "In Stock at Mori",
     stores: ["Mori"],
     images: [
-      "/assets/images/editorial/hero_jewellery.jpg",
-      "/assets/images/collections/collection_gold.jpg"
+
     ],
     tags: ["Gold", "Necklaces", "Statement", "Pendant"]
   },
