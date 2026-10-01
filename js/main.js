@@ -24,17 +24,37 @@ export function refreshLucideIcons() {
     return;
   }
 
+  const loadLocalLucide = () => {
+    if (window.lucide) {
+      render();
+      return;
+    }
+
+    const existingScript = document.querySelector('script[data-tuwano-lucide]');
+    if (existingScript) return;
+
+    const script = document.createElement('script');
+    script.dataset.tuwanoLucide = 'true';
+    script.src = new URL('js/vendor/lucide.min.js', document.baseURI).href;
+    script.addEventListener('load', render, { once: true });
+    script.addEventListener('error', () => {
+      console.warn('TUWANO: Lucide icon library could not be loaded.');
+    }, { once: true });
+    document.head.appendChild(script);
+  };
+
   const existingScript = document.querySelector('script[src*="lucide.min.js"]');
   if (existingScript) {
     existingScript.addEventListener('load', render, { once: true });
-    window.setTimeout(render, 250);
+    existingScript.addEventListener('error', loadLocalLucide, { once: true });
+    window.setTimeout(() => {
+      if (window.lucide) render();
+      else loadLocalLucide();
+    }, 300);
     return;
   }
 
-  const script = document.createElement('script');
-  script.src = new URL('js/vendor/lucide.min.js', document.baseURI).href;
-  script.addEventListener('load', render, { once: true });
-  document.head.appendChild(script);
+  loadLocalLucide();
 }
 
 function initApp() {
@@ -426,9 +446,7 @@ function initScrollAnimations() {
 
 function initLuxuryChrome() {
   const header = document.querySelector('.site-header');
-  if (header && document.querySelector('.hero-section')) {
-    header.classList.add('hero-overlay-header');
-  }
+  // Keep the standard solid header on the homepage; the hero remains full-bleed below it.
   document.querySelector('.tuwano-announcement')?.remove();
 
   // GitHub Pages hosts this site at /TUWANO/. Normalize root-relative
