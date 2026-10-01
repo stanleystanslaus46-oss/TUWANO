@@ -20,7 +20,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "In Stock at Madukani & Mori",
+    availability: "Listed at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
       "/assets/images/products/gold_cuban_chain.jpg"
@@ -43,7 +43,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "Available for Custom Sizing",
+    availability: "Enquire about sizing",
     stores: ["Madukani", "Mori"],
     images: [
       "/assets/images/products/diamond_gold_ring.jpg"
@@ -66,7 +66,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "In Stock at Madukani & Mori",
+    availability: "Listed at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
       "/assets/images/products/gold_hoop_earrings.jpg"
@@ -89,7 +89,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "In Stock at Mori",
+    availability: "Listed at Mori",
     stores: ["Mori"],
     images: [
       "/assets/images/products/silver_cuff_bangle.jpg"
@@ -113,7 +113,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "In Stock at Madukani",
+    availability: "Listed at Madukani",
     stores: ["Madukani"],
     images: [
 
@@ -137,7 +137,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: false,
-    availability: "In Stock at Madukani & Mori",
+    availability: "Listed at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
 
@@ -160,7 +160,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: false,
-    availability: "In Stock at Mori",
+    availability: "Listed at Mori",
     stores: ["Mori"],
     images: [],
     tags: ["Silver", "Earrings", "Minimalist"]
@@ -180,12 +180,12 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "In Stock at Madukani",
+    availability: "Listed at Madukani",
     stores: ["Madukani"],
     images: [
 
     ],
-    tags: ["Gold", "Rings", "Signet", "Customizable", "Heirloom"]
+    tags: ["Gold", "Rings", "Signet", "Heirloom"]
   },
   {
     id: "tj-piercing-001",
@@ -203,7 +203,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "Available at Madukani & Mori Piercing Studios",
+    availability: "Piercing service available at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
 
@@ -226,7 +226,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: false,
-    availability: "In Stock at Mori",
+    availability: "Listed at Mori",
     stores: ["Mori"],
     images: [
 
@@ -249,7 +249,7 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: false,
-    availability: "In Stock at Madukani & Mori",
+    availability: "Listed at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [],
     tags: ["Silver", "Rings", "Bands", "Modern"]
@@ -270,10 +270,10 @@ export const PRODUCTS = [
     price: null,
     priceLabel: "Price on request",
     featured: true,
-    availability: "Available for Custom Sizing",
+    availability: "Enquire about sizing",
     stores: ["Madukani", "Mori"],
     images: [],
-    tags: ["Gold", "Rings", "Eternity", "Luxury", "Featured"]
+    tags: ["Gold", "Rings", "Eternity", "Featured"]
   }
 ];
 
@@ -299,7 +299,7 @@ export const STORES = [
     phoneClean: "+255679323647",
     whatsappClean: "255679323647",
     image: "/assets/images/stores/madukani.jpg",
-    services: ["Gold & Silver Retail", "Bespoke Jewellery Consultations", "Professional Ear Piercing", "Jewellery Care Guidance"]
+    services: ["Gold & Silver Retail", "Jewellery Consultations", "Ear Piercing", "Jewellery Care Guidance"]
   },
   {
     id: "mori",
@@ -310,7 +310,7 @@ export const STORES = [
     phoneClean: "+255652562875",
     whatsappClean: "255652562875",
     image: "/assets/images/stores/mori.jpg",
-    services: ["Gold & Silver Collections", "Custom Ring Sizing", "Professional Ear Piercing", "In-Store Consultations"]
+    services: ["Gold & Silver Collections", "Ear Piercing", "In-Store Enquiries", "Jewellery Care Guidance"]
   }
 ];
 
