@@ -15,9 +15,30 @@ export function initProductPage() {
   const productId = urlParams.get('id') || 'tj-gold-001';
   let product = getProductById(productId);
 
-  // Fallback if ID is invalid
+  // Invalid IDs should not silently display another product.
   if (!product) {
-    product = PRODUCTS[0];
+    document.title = 'Product Not Found | Tuwano Jewelleries';
+    const breadcrumbEl = document.getElementById('product-breadcrumbs');
+    if (breadcrumbEl) {
+      breadcrumbEl.innerHTML = `
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        <a href="/shop.html">Shop</a>
+        <span class="sep">/</span>
+        <span class="current">Product not found</span>
+      `;
+    }
+    container.innerHTML = `
+      <div class="product-not-found">
+        <i data-lucide="search-x" aria-hidden="true"></i>
+        <span class="section-kicker">Catalogue</span>
+        <h1 class="section-title">Product not found</h1>
+        <p>The jewellery piece you requested is not available in the current catalogue.</p>
+        <a href="/shop.html" class="btn btn-primary">Explore All Jewellery</a>
+      </div>
+    `;
+    refreshLucideIcons();
+    return;
   }
 
   // Update Page Title and OpenGraph dynamically
@@ -231,7 +252,7 @@ export function initProductPage() {
         <article class="product-card" data-id="${rel.id}">
           <div class="product-card-media">
             <a href="/product.html?id=${rel.id}" class="product-card-link" aria-label="${rel.name}">
-              <img src="${rel.images[0]}" alt="${rel.name}" class="product-card-img" loading="lazy" />
+              ${rel.images[0] ? `<img src="${rel.images[0]}" alt="${rel.name}" class="product-card-img" loading="lazy" decoding="async" width="900" height="900" />` : `<span class="product-card-image-placeholder" aria-label="Product photography not currently available"><i data-lucide="image-off" aria-hidden="true"></i><span>Product photography coming soon</span></span>`}
             </a>
           </div>
           <div class="product-card-body">
