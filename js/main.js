@@ -22,6 +22,7 @@ function initApp() {
   refreshLucideIcons();
   initStickyHeader();
   initMobileNav();
+  initLuxuryChrome();
   initCartDrawer();
   initSearchModal();
   initWishlistDrawer();
@@ -395,4 +396,28 @@ function initScrollAnimations() {
   document.querySelectorAll('.reveal-on-scroll').forEach(el => {
     observer.observe(el);
   });
+}
+
+
+function initLuxuryChrome() {
+  const header = document.querySelector('.site-header');
+  if (header && !document.querySelector('.tuwano-announcement')) {
+    const bar = document.createElement('div');
+    bar.className = 'tuwano-announcement';
+    bar.textContent = 'Fine jewellery · Madukani & Mori · WhatsApp concierge available';
+    header.parentNode.insertBefore(bar, header);
+  }
+  if (document.querySelector('.mobile-bottom-nav')) return;
+  const nav = document.createElement('nav');
+  nav.className = 'mobile-bottom-nav';
+  nav.setAttribute('aria-label','Mobile quick navigation');
+  nav.innerHTML = `<a href="/" data-mobile-nav="home"><i data-lucide="house"></i><span>Home</span></a><a href="/shop.html" data-mobile-nav="shop"><i data-lucide="grid-2x2"></i><span>Shop</span></a><button type="button" data-mobile-nav="search"><i data-lucide="search"></i><span>Search</span></button><button type="button" data-mobile-nav="wishlist"><i data-lucide="heart"></i><span>Saved</span><span class="mobile-nav-badge wishlist-count-badge"></span></button><button type="button" data-mobile-nav="bag"><i data-lucide="shopping-bag"></i><span>Bag</span><span class="mobile-nav-badge cart-count-badge"></span></button>`;
+  document.body.appendChild(nav);
+  nav.querySelector('[data-mobile-nav="search"]')?.addEventListener('click',()=>document.querySelector('.open-search-btn')?.click());
+  nav.querySelector('[data-mobile-nav="wishlist"]')?.addEventListener('click',()=>document.querySelector('.open-wishlist-btn')?.click());
+  nav.querySelector('[data-mobile-nav="bag"]')?.addEventListener('click',()=>document.querySelector('.open-cart-btn')?.click());
+  const path=window.location.pathname.toLowerCase();
+  const active=path.endsWith('shop.html')||path.endsWith('gold.html')||path.endsWith('silver.html')||path.endsWith('rings.html')||path.endsWith('necklaces.html')||path.endsWith('bracelets.html')||path.endsWith('earrings.html')||path.endsWith('product.html')?'shop':'home';
+  nav.querySelector(`[data-mobile-nav="${active}"]`)?.classList.add('is-active');
+  refreshLucideIcons();
 }
