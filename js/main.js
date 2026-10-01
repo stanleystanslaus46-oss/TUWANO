@@ -135,7 +135,7 @@ function initWishlistDrawer() {
 
     itemsContainer.innerHTML = products.map(product => `
       <div class="wishlist-item" data-id="${product.id}">
-        <img src="${product.images[0]}" alt="${product.name}" class="wishlist-item-img" loading="lazy" />
+        ${product.images[0] ? `<img src="${product.images[0]}" alt="${product.name}" class="wishlist-item-img" loading="lazy" />` : `<span class="wishlist-item-img wishlist-item-img--placeholder" aria-hidden="true"><i data-lucide="image-off"></i></span>`}
         <div class="wishlist-item-details">
           <span class="wishlist-item-cat">${product.category} · ${product.collection}</span>
           <a href="/product.html?id=${product.id}" class="wishlist-item-title">${product.name}</a>
