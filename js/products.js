@@ -162,9 +162,7 @@ export const PRODUCTS = [
     featured: false,
     availability: "In Stock at Mori",
     stores: ["Mori"],
-    images: [
-      "/assets/images/collections/collection_silver.jpg"
-    ],
+    images: [],
     tags: ["Silver", "Earrings", "Minimalist"]
   },
   {
@@ -276,10 +274,7 @@ export const PRODUCTS = [
     featured: true,
     availability: "Available for Custom Sizing",
     stores: ["Madukani", "Mori"],
-    images: [
-      "/assets/images/products/diamond_gold_ring.jpg",
-      "/assets/images/collections/collection_gold.jpg"
-    ],
+    images: [],
     tags: ["Gold", "Rings", "Eternity", "Luxury", "Featured"]
   }
 ];
