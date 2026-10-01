@@ -126,8 +126,8 @@ export function initShopPage(defaultCategory = null) {
         <article class="product-card" data-id="${product.id}">
           <div class="product-card-media">
             <a href="/product.html?id=${product.id}" class="product-card-link" aria-label="${product.name}">
-              <img src="${product.images[0]}" alt="${product.name}" class="product-card-img primary" loading="lazy" />
-              ${product.images[1] ? `<img src="${product.images[1]}" alt="${product.name} detail" class="product-card-img secondary" loading="lazy" />` : ''}
+              <img src="${product.images[0]}" alt="${product.name}" class="product-card-img primary" loading="lazy" decoding="async" width="900" height="900" />
+              ${product.images[1] ? `<img src="${product.images[1]}" alt="" class="product-card-img secondary" loading="lazy" decoding="async" aria-hidden="true" width="900" height="900" />` : ''}
             </a>
             
             <button type="button" class="wishlist-btn ${inWishlist ? 'active' : ''}" data-id="${product.id}" aria-label="${inWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'}">
