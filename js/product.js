@@ -45,7 +45,7 @@ export function initProductPage() {
       <!-- Gallery Column (Sticky on Desktop) -->
       <div class="pdp-gallery">
         <div class="pdp-main-image-wrap">
-          <img src="${product.images[0]}" alt="${product.name}" id="pdp-main-img" class="pdp-main-image" />
+          <img src="${product.images[0]}" alt="${product.name}" id="pdp-main-img" class="pdp-main-image" loading="eager" decoding="async" width="1200" height="1200" />
           <button type="button" class="pdp-zoom-indicator" aria-label="Click to examine full image">
             <i data-lucide="zoom-in"></i>
           </button>
@@ -55,7 +55,7 @@ export function initProductPage() {
           <div class="pdp-thumbnails" role="tablist" aria-label="Product thumbnails">
             ${product.images.map((img, idx) => `
               <button type="button" class="pdp-thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${img}" role="tab" aria-selected="${idx === 0}" aria-label="View view ${idx + 1}">
-                <img src="${img}" alt="${product.name} angle ${idx + 1}" loading="lazy" />
+                <img src="${img}" alt="${idx === 0 ? product.name : `${product.name} gallery image ${idx + 1}`}" loading="lazy" decoding="async" width="160" height="160" />
               </button>
             `).join('')}
           </div>
