@@ -127,6 +127,11 @@ function initWishlistDrawer() {
   const footer = document.getElementById('wishlist-drawer-footer');
   const enquiryBtn = document.getElementById('wishlist-whatsapp-btn');
 
+  if (closeBtn) {
+    closeBtn.innerHTML = '<i data-lucide="arrow-left"></i>';
+    closeBtn.setAttribute('aria-label', 'Back from saved pieces');
+  }
+
   function render() {
     const count = store.getWishlistCount();
     wishlistBadges.forEach(badge => {
@@ -226,6 +231,7 @@ function initWishlistDrawer() {
 
   store.subscribe(render);
   render();
+  refreshLucideIcons();
 }
 
 /**
