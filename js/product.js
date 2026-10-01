@@ -120,7 +120,7 @@ export function initProductPage() {
 
         <!-- Conversion Actions -->
         <div class="pdp-actions">
-          <a href="${createProductWhatsAppUrl(product, 'madukani')}" id="pdp-wa-cta" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg pdp-whatsapp-btn">
+          <a href="${createProductWhatsAppUrl(product, selectedStore)}" id="pdp-wa-cta" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg pdp-whatsapp-btn">
             <img src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
             Enquire on WhatsApp
           </a>
