@@ -1238,6 +1238,18 @@ svg.lucide {
   flex: 0 0 auto;
 }
 
+.btn .social-brand-icon,
+.product-card-wa-link .social-brand-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.pdp-whatsapp-btn .social-brand-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
