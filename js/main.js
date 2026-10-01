@@ -401,12 +401,10 @@ function initScrollAnimations() {
 
 function initLuxuryChrome() {
   const header = document.querySelector('.site-header');
-  if (header && !document.querySelector('.tuwano-announcement')) {
-    const bar = document.createElement('div');
-    bar.className = 'tuwano-announcement';
-    bar.textContent = 'Fine jewellery · Madukani & Mori · WhatsApp concierge available';
-    header.parentNode.insertBefore(bar, header);
+  if (header && document.querySelector('.hero-section')) {
+    header.classList.add('hero-overlay-header');
   }
+  document.querySelector('.tuwano-announcement')?.remove();
   if (document.querySelector('.mobile-bottom-nav')) return;
   const nav = document.createElement('nav');
   nav.className = 'mobile-bottom-nav';
