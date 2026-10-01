@@ -9,6 +9,7 @@ const pages = [
 ];
 
 const failures = [];
+const duplicateTitles = new Map();
 
 for (const file of pages) {
   const full = path.join(root, file);
@@ -25,12 +26,15 @@ for (const file of pages) {
   const twitterCard = html.match(/<meta[^>]+name=["']twitter:card["'][^>]+>/i);
 
   if (!title) failures.push(`${file}: missing <title>`);
+  else duplicateTitles.set(title, (duplicateTitles.get(title) || 0) + 1);
   if (!description) failures.push(`${file}: missing meta description`);
   if (!canonical) failures.push(`${file}: missing canonical link`);
   if (!ogTitle) failures.push(`${file}: missing og:title`);
   if (!twitterCard) failures.push(`${file}: missing twitter:card`);
   if (!/<html[^>]+lang=["']en["']/i.test(html)) failures.push(`${file}: missing lang="en"`);
 }
+
+for (const [title, count] of duplicateTitles) if (count > 1) failures.push(`duplicate title: ${title}`);
 
 const robots = path.join(root, "robots.txt");
 if (!fs.existsSync(robots)) failures.push("robots.txt: missing");
