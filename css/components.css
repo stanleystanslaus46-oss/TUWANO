@@ -1373,3 +1373,6 @@ svg.lucide {
   color: var(--color-brand-blue);
   opacity: 0.5;
 }
+
+.cart-item-img--placeholder { display:inline-flex; align-items:center; justify-content:center; background:#f2f1ed; color:var(--color-brand-blue); }
+.cart-item-img--placeholder svg { width:20px; height:20px; opacity:.5; }
