@@ -4,6 +4,8 @@ import { defineConfig } from 'vite';
 const rootDir = typeof import.meta.dirname !== 'undefined' ? import.meta.dirname : process.cwd();
 
 export default defineConfig({
+  // GitHub Pages serves this repository from /TUWANO/.
+  base: '/TUWANO/',
   server: {
     port: 3000,
     host: '0.0.0.0',
