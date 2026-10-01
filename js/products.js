@@ -339,7 +339,7 @@ export function getProductsByCategory(categoryKey) {
   const key = categoryKey.toLowerCase();
   return PRODUCTS.filter(p => {
     if (key === "necklaces-chains") return p.collection === "Necklaces" || p.collection === "Chains";
-    return p.category.toLowerCase() === key || p.collection.toLowerCase() === key || p.tags.some(t => t.toLowerCase() === key);
+    return p.category.toLowerCase() === key || p.collection.toLowerCase() === key;
   });
 }
 
