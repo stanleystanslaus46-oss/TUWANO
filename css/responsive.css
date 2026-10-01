@@ -601,10 +601,19 @@
 @media (max-width: 480px) {
   .header-brand {
     max-width: calc(100% - 132px);
+    gap: 0.4rem;
   }
 
   .header-brand-text {
-    display: none;
+    display: flex;
+  }
+
+  .header-brand-title {
+    font-size: 0.95rem;
+  }
+
+  .header-brand-sub {
+    font-size: 0.45rem;
   }
 
   .header-logo-img {
@@ -651,6 +660,18 @@
 }
 
 @media (max-width: 360px) {
+  .header-brand {
+    gap: 0.3rem;
+  }
+
+  .header-brand-title {
+    font-size: 0.88rem;
+  }
+
+  .header-brand-sub {
+    font-size: 0.4rem;
+  }
+
   .header-actions {
     gap: 0;
   }
@@ -699,3 +720,4 @@
     width: 100%;
   }
 }
+
