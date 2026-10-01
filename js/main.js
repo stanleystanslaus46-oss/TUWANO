@@ -10,6 +10,7 @@ import { createCartWhatsAppUrl, createProductWhatsAppUrl } from './whatsapp.js';
 
 export function refreshLucideIcons() {
   if (typeof window === 'undefined') return;
+
   const render = () => {
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       window.lucide.createIcons({
@@ -17,11 +18,23 @@ export function refreshLucideIcons() {
       });
     }
   };
+
   if (window.lucide) {
     render();
-  } else {
-    window.setTimeout(render, 0);
+    return;
   }
+
+  const existingScript = document.querySelector('script[src*="lucide.min.js"]');
+  if (existingScript) {
+    existingScript.addEventListener('load', render, { once: true });
+    window.setTimeout(render, 250);
+    return;
+  }
+
+  const script = document.createElement('script');
+  script.src = new URL('js/vendor/lucide.min.js', document.baseURI).href;
+  script.addEventListener('load', render, { once: true });
+  document.head.appendChild(script);
 }
 
 function initApp() {
