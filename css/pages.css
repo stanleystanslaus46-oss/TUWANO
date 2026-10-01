@@ -912,3 +912,26 @@
   border-radius: var(--radius-xs);
   margin-top: 0.5rem;
 }
+
+.product-not-found {
+  max-width: 620px;
+  margin: clamp(3rem, 8vw, 6rem) auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+.product-not-found svg {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 1rem;
+  color: var(--color-brand-blue);
+}
+.product-not-found .section-title {
+  margin: 0.35rem 0 0.75rem;
+}
+.product-not-found p {
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-text-muted);
+}
