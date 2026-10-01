@@ -19,7 +19,7 @@ for (const file of pages) {
   }
 
   const html = fs.readFileSync(full, "utf8");
-  const title = html.match(/<title>([\\s\\S]*?)<\\/title>/i)?.[1]?.trim();
+  const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   const description = html.match(/<meta[^>]+name=["']description["'][^>]+content=["'][^"']*["']/i);
   const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]+>/i);
   const ogTitle = html.match(/<meta[^>]+property=["']og:title["'][^>]+>/i);
@@ -52,3 +52,4 @@ if (failures.length) {
 }
 
 console.log(`Tuwano static validation passed: ${pages.length} pages checked.`);
+
