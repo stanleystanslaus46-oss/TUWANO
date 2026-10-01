@@ -10,13 +10,12 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Chains",
     subcategory: "Necklaces",
-    description: "Crafted in solid yellow gold, this Cuban link chain embodies timeless weight and enduring luster. Engineered with interlocking links and an integrated box clasp with safety catches.",
+    description: "A classic Cuban link silhouette presented in a polished yellow-gold finish.",
     details: [
-      "Material: Solid Yellow Gold",
+      "Material: Yellow Gold",
       "Link Width: 6.5mm",
-      "Closure: Double-safety box clasp",
-      "Finish: High polish mirror finish",
-      "Craftsmanship: Hand-finished"
+      "Closure: Box clasp",
+      "Finish: High polish"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -36,12 +35,11 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Rings",
     subcategory: "Fine Rings",
-    description: "An exceptional brilliant-cut round solitaire stone securely seated in a four-prong solid gold setting. Slim, tapered shank engineered for comfort and stacking with wedding bands.",
+    description: "A classic solitaire ring with a round-cut stone and four-prong setting.",
     details: [
-      "Material: Fine Solid Gold",
-      "Setting: Classic four-prong setting",
-      "Stone: Brilliant Round Cut",
-      "Band Profile: Comfort-fit tapered shank",
+      "Material: Gold",
+      "Setting: Four-prong setting",
+      "Stone: Round cut",
       "Finish: High polish"
     ],
     price: null,
@@ -61,13 +59,12 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Earrings",
     subcategory: "Hoops",
-    description: "Subtle yet commanding, these twisted gold huggies catch light from every angle. Featuring a seamless hinge click closure for effortless everyday luxury wear.",
+    description: "Twisted gold huggie hoops with a compact silhouette and click-hinge closure.",
     details: [
-      "Material: Solid Yellow Gold",
+      "Material: Yellow Gold",
       "Diameter: 16mm",
-      "Profile: Sculptural rope twist",
-      "Closure: Click-hinge snap closure",
-      "Weight: Lightweight comfort wear"
+      "Profile: Twisted",
+      "Closure: Click-hinge closure"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -86,13 +83,12 @@ export const PRODUCTS = [
     category: "Silver",
     collection: "Bracelets",
     subcategory: "Cuffs",
-    description: "Crafted from heavy 925 sterling silver with a refined satin and mirror polish contrast. The open cuff silhouette flexes slightly for an ergonomic bespoke wrist fit.",
+    description: "A sculptural open cuff in sterling silver with a polished finish.",
     details: [
       "Material: 925 Sterling Silver",
       "Width: 12mm",
-      "Profile: Ergonomic concave contour",
-      "Finish: Hand-polished luster",
-      "Sizing: Adjustable open cuff"
+      "Profile: Open cuff",
+      "Finish: Polished"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -111,12 +107,12 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Bracelets",
     subcategory: "Chains",
-    description: "A liquid-like drape of interwoven solid gold segments that contours smoothly to the wrist. Reflects continuous ambient light with every subtle gesture.",
+    description: "A herringbone-style bracelet with a smooth, fluid profile.",
     details: [
-      "Material: Solid Yellow Gold",
+      "Material: Yellow Gold",
       "Width: 5.0mm",
-      "Closure: Custom plunger clasp with dual safety figure-eights",
-      "Length: Available in 7\" and 7.5\"",
+      "Closure: Plunger clasp",
+      "Length: 7\" and 7.5\"",
       "Finish: High polish"
     ],
     price: null,
@@ -136,13 +132,13 @@ export const PRODUCTS = [
     category: "Silver",
     collection: "Chains",
     subcategory: "Necklaces",
-    description: "Substantial 925 sterling silver curb chain featuring diamond-cut beveled edges that enhance light refraction. Modern, bold, and crafted for longevity.",
+    description: "A substantial sterling silver curb chain with a polished finish.",
     details: [
       "Material: 925 Sterling Silver",
       "Link Gauge: 7.0mm",
-      "Clasp: Heavy-duty lobster trigger clasp",
-      "Length: 22 inches (custom lengths upon request)",
-      "Finish: Rhodium plated for brilliant luster"
+      "Clasp: Lobster clasp",
+      "Length: 22 inches",
+      "Finish: Polished"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -160,12 +156,12 @@ export const PRODUCTS = [
     category: "Silver",
     collection: "Earrings",
     subcategory: "Drops",
-    description: "Minimalist drop earrings balancing fluid silver wire curvature with sharp architectural proportions. Feather-light for all-day comfort.",
+    description: "Minimalist sterling silver drop earrings with a clean geometric silhouette.",
     details: [
       "Material: 925 Sterling Silver",
       "Drop Length: 38mm",
-      "Closure: French ear wire with silicone stopper",
-      "Finish: Polished sterling silver"
+      "Closure: French ear wire",
+      "Finish: Polished"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -183,12 +179,11 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Rings",
     subcategory: "Signet",
-    description: "A contemporary interpretation of the heirloom signet ring. Smooth oval face suitable for custom hand-engraving of initials or family crests at Tuwano atelier.",
+    description: "A contemporary signet ring with a smooth oval face.",
     details: [
-      "Material: Solid Gold",
+      "Material: Gold",
       "Face Dimensions: 14mm x 11mm",
-      "Engraving: Custom hand engraving available upon request",
-      "Profile: Solid back, heavy comfort fit"
+      "Profile: Solid back"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -207,13 +202,12 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Earrings",
     subcategory: "Piercing",
-    description: "Designed specifically for healed ear cartilage, helix, and lobe piercings. Featuring an internally threaded flat back disk to prevent snagging during sleep and daily life.",
+    description: "A flat-back labret stud designed for selected healed ear piercings.",
     details: [
-      "Material: 14k/18k Solid Gold",
+      "Material: Gold",
       "Gauge: 16G (1.2mm) / 18G (1.0mm)",
       "Backing: 4mm flat disk back",
-      "Suitability: Cartilage, Tragus, Conch, Lobe",
-      "Service: In-store piercing consultation available"
+      "Suitability: Selected ear piercings"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -232,11 +226,11 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Necklaces",
     subcategory: "Pendants",
-    description: "A sensual cascading lariat necklace with an adjustable sliding gold bead and bar drop. Moves fluidly with the collarbone, designed for deep necklines or high collars alike.",
+    description: "A cascading lariat necklace with an adjustable drop and polished finish.",
     details: [
-      "Material: Solid Yellow Gold",
+      "Material: Yellow Gold",
       "Chain Length: 18\" with 3\" lariat drop",
-      "Closure: Sliding silicone-core tension bead and spring ring",
+      "Closure: Sliding bead and spring ring",
       "Finish: Mirror polish"
     ],
     price: null,
@@ -256,12 +250,12 @@ export const PRODUCTS = [
     category: "Silver",
     collection: "Rings",
     subcategory: "Bands",
-    description: "Three harmonious interlocking sterling silver bands that roll gracefully over the knuckle. Symbolizing unity, continuity, and effortless modern elegance.",
+    description: "Three interlocking sterling silver bands with a clean, contemporary profile.",
     details: [
       "Material: 925 Sterling Silver",
       "Structure: Triple rolling bands",
       "Band Width: 3.2mm each",
-      "Finish: Hand-polished sterling"
+      "Finish: Polished"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -279,12 +273,12 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Rings",
     subcategory: "Eternity",
-    description: "A continuous ribbon of micro-pavé diamonds set in solid gold. Designed for striking symmetry whether worn alone or stacked alongside heirloom pieces.",
+    description: "A gold eternity band featuring a continuous pavé-style setting.",
     details: [
-      "Material: Solid Gold",
-      "Stone Type: Micro-pavé brilliant cut diamonds",
-      "Setting: Shared-prong micro setting",
-      "Profile: Low profile comfort edge"
+      "Material: Gold",
+      "Stone Type: Diamonds",
+      "Setting: Pavé-style setting",
+      "Profile: Low profile"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -341,7 +335,10 @@ export const BRAND = {
   descriptor: "Jewellers",
   tagline: "Jewellery That Endures",
   instagram: "@tuwano_jewelleries",
-  instagramUrl: "https://www.instagram.com/tuwano_jewelleries"
+  instagramUrl: "https://www.instagram.com/tuwano_jewelleries",
+  tiktokUrl: "https://www.tiktok.com/@tuwanojeweller",
+  facebookUrl: "https://www.facebook.com/share/1Du5ghvJBj/",
+  threadsUrl: "https://www.threads.com/@tuwano_jewelleries"
 };
 
 export function getProductById(id) {
