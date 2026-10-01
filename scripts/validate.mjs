@@ -24,6 +24,9 @@ for (const file of pages) {
   const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]+>/i);
   const ogTitle = html.match(/<meta[^>]+property=["']og:title["'][^>]+>/i);
   const twitterCard = html.match(/<meta[^>]+name=["']twitter:card["'][^>]+>/i);
+  const ogDescription = html.match(/<meta[^>]+property=["']og:description["'][^>]+>/i);
+  const ogImage = html.match(/<meta[^>]+property=["']og:image["'][^>]+>/i);
+  const viewport = html.match(/<meta[^>]+name=["']viewport["'][^>]+>/i);
 
   if (!title) failures.push(`${file}: missing <title>`);
   else duplicateTitles.set(title, (duplicateTitles.get(title) || 0) + 1);
@@ -31,6 +34,9 @@ for (const file of pages) {
   if (!canonical) failures.push(`${file}: missing canonical link`);
   if (!ogTitle) failures.push(`${file}: missing og:title`);
   if (!twitterCard) failures.push(`${file}: missing twitter:card`);
+  if (!ogDescription) failures.push(`${file}: missing og:description`);
+  if (!ogImage) failures.push(`${file}: missing og:image`);
+  if (!viewport) failures.push(`${file}: missing viewport`);
   if (!/<html[^>]+lang=["']en["']/i.test(html)) failures.push(`${file}: missing lang="en"`);
 }
 
