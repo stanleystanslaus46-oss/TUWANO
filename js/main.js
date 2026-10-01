@@ -8,6 +8,37 @@ import { initSearchModal } from './search.js';
 import { getProductById } from './products.js';
 import { createCartWhatsAppUrl, createProductWhatsAppUrl } from './whatsapp.js';
 
+const TUWANO_ICON_SVGS = {
+  search: '<circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path>',
+  heart: '<path d="M20.8 8.6c0 5.5-8.8 10.4-8.8 10.4S3.2 14.1 3.2 8.6A4.6 4.6 0 0 1 12 6.3a4.6 4.6 0 0 1 8.8 2.3Z"></path>',
+  'shopping-bag': '<path d="M6 8h12l1 13H5L6 8Z"></path><path d="M9 8a3 3 0 0 1 6 0"></path>',
+  menu: '<path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path>',
+  x: '<path d="M6 6l12 12"></path><path d="M18 6 6 18"></path>',
+  house: '<path d="m3 10 9-7 9 7v10H3V10Z"></path><path d="M9 21v-6h6v6"></path>',
+  'grid-2x2': '<rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect>',
+  'arrow-left': '<path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>'
+};
+
+function renderFallbackLucideIcons() {
+  document.querySelectorAll('[data-lucide]').forEach((node) => {
+    const name = node.getAttribute('data-lucide');
+    const paths = TUWANO_ICON_SVGS[name];
+    if (!paths || node.tagName.toLowerCase() === 'svg') return;
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '1.6');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.setAttribute('class', 'lucide lucide-' + name);
+    svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = paths;
+    node.replaceWith(svg);
+  });
+}
+
 export function refreshLucideIcons() {
   if (typeof window === 'undefined') return;
 
@@ -55,10 +86,12 @@ export function refreshLucideIcons() {
   }
 
   loadLocalLucide();
+  window.setTimeout(renderFallbackLucideIcons, 700);
 }
 
 function initApp() {
   refreshLucideIcons();
+  window.setTimeout(renderFallbackLucideIcons, 900);
   initStickyHeader();
   initMobileNav();
   initLuxuryChrome();
