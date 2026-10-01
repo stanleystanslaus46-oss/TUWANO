@@ -283,6 +283,7 @@ export const CATEGORIES = [
   { id: "silver", name: "Silver", count: PRODUCTS.filter(p => p.category === "Silver").length },
   { id: "rings", name: "Rings", count: PRODUCTS.filter(p => p.collection === "Rings").length },
   { id: "necklaces", name: "Necklaces", count: PRODUCTS.filter(p => p.collection === "Necklaces").length },
+  { id: "necklaces-chains", name: "Necklaces & Chains", count: PRODUCTS.filter(p => p.collection === "Necklaces" || p.collection === "Chains").length },
   { id: "chains", name: "Chains", count: PRODUCTS.filter(p => p.collection === "Chains").length },
   { id: "bracelets", name: "Bracelets", count: PRODUCTS.filter(p => p.collection === "Bracelets").length },
   { id: "earrings", name: "Earrings", count: PRODUCTS.filter(p => p.collection === "Earrings").length }
@@ -336,11 +337,10 @@ export function getFeaturedProducts() {
 export function getProductsByCategory(categoryKey) {
   if (!categoryKey || categoryKey === "all") return PRODUCTS;
   const key = categoryKey.toLowerCase();
-  return PRODUCTS.filter(p => 
-    p.category.toLowerCase() === key || 
-    p.collection.toLowerCase() === key ||
-    p.tags.some(t => t.toLowerCase() === key)
-  );
+  return PRODUCTS.filter(p => {
+    if (key === "necklaces-chains") return p.collection === "Necklaces" || p.collection === "Chains";
+    return p.category.toLowerCase() === key || p.collection.toLowerCase() === key || p.tags.some(t => t.toLowerCase() === key);
+  });
 }
 
 export function searchProducts(query) {
