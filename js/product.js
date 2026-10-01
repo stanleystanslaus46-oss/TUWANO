@@ -45,10 +45,10 @@ export function initProductPage() {
       <!-- Gallery Column (Sticky on Desktop) -->
       <div class="pdp-gallery">
         <div class="pdp-main-image-wrap">
-          <img src="${product.images[0]}" alt="${product.name}" id="pdp-main-img" class="pdp-main-image" loading="eager" decoding="async" width="1200" height="1200" />
+          ${product.images[0] ? `<img src="${product.images[0]}" alt="${product.name}" id="pdp-main-img" class="pdp-main-image" loading="eager" decoding="async" width="1200" height="1200" />
           <button type="button" class="pdp-zoom-indicator" aria-label="Click to examine full image">
             <i data-lucide="zoom-in"></i>
-          </button>
+          </button>` : `<div class="pdp-image-placeholder" role="img" aria-label="Product photography not currently available"><i data-lucide="image-off" aria-hidden="true"></i><span>Product photography coming soon</span></div>`}
         </div>
 
         ${product.images.length > 1 ? `
