@@ -1158,3 +1158,50 @@ svg.lucide {
     right: 14px;
   }
 }
+
+
+/* Header reset: restore the normal solid header and enlarge the brand mark. */
+.site-header,
+.site-header.hero-overlay-header,
+.site-header.hero-overlay-header.is-scrolled {
+  position: sticky;
+  top: 0;
+  background: rgba(255,253,250,.98);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 18px rgba(23,23,22,.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.site-header.hero-overlay-header .header-nav-link,
+.site-header.hero-overlay-header .header-action-btn,
+.site-header.hero-overlay-header .mobile-menu-trigger,
+.site-header.hero-overlay-header.is-scrolled .header-nav-link,
+.site-header.hero-overlay-header.is-scrolled .header-action-btn,
+.site-header.hero-overlay-header.is-scrolled .mobile-menu-trigger {
+  color: #171716;
+  text-shadow: none;
+}
+.site-header.hero-overlay-header .header-nav-link::after,
+.site-header.hero-overlay-header.is-scrolled .header-nav-link::after {
+  background-color: #171716;
+}
+.header-logo-img,
+.site-header.hero-overlay-header .header-logo-img,
+.site-header.hero-overlay-header.is-scrolled .header-logo-img {
+  height: 68px;
+  filter: none;
+}
+@media (max-width: 820px) {
+  .header-logo-img,
+  .site-header.hero-overlay-header .header-logo-img,
+  .site-header.hero-overlay-header.is-scrolled .header-logo-img {
+    height: 60px;
+  }
+}
+@media (max-width: 520px) {
+  .header-logo-img,
+  .site-header.hero-overlay-header .header-logo-img,
+  .site-header.hero-overlay-header.is-scrolled .header-logo-img {
+    height: 58px;
+  }
+}
