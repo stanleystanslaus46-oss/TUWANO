@@ -260,7 +260,7 @@ export function openGlobalQuickView(productId) {
   content.innerHTML = `
     <div class="qv-grid">
       <div class="qv-gallery">
-        <img src="${product.images[0]}" alt="${product.name}" id="qv-main-img" class="qv-main-image" />
+        ${product.images[0] ? `<img src="${product.images[0]}" alt="${product.name}" id="qv-main-img" class="qv-main-image" />` : `<div class="qv-image-placeholder" role="img" aria-label="Product photography not currently available"><i data-lucide="image-off"></i><span>Product photography coming soon</span></div>`}
         ${product.images.length > 1 ? `
           <div class="qv-thumbs">
             ${product.images.map((img, idx) => `
