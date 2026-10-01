@@ -9,12 +9,18 @@ import { getProductById } from './products.js';
 import { createCartWhatsAppUrl, createProductWhatsAppUrl } from './whatsapp.js';
 
 export function refreshLucideIcons() {
-  if (typeof window !== 'undefined' && window.lucide && typeof window.lucide.createIcons === 'function') {
-    window.lucide.createIcons({
-      attrs: {
-        'stroke-width': 1.6,
-      }
-    });
+  if (typeof window === 'undefined') return;
+  const render = () => {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons({
+        attrs: { 'stroke-width': 1.6 },
+      });
+    }
+  };
+  if (window.lucide) {
+    render();
+  } else {
+    window.setTimeout(render, 0);
   }
 }
 
@@ -147,7 +153,7 @@ function initWishlistDrawer() {
         ${product.images[0] ? `<img src="${product.images[0]}" alt="${product.name}" class="wishlist-item-img" loading="lazy" />` : `<span class="wishlist-item-img wishlist-item-img--placeholder" aria-hidden="true"><i data-lucide="image-off"></i></span>`}
         <div class="wishlist-item-details">
           <span class="wishlist-item-cat">${product.category} · ${product.collection}</span>
-          <a href="/product.html?id=${product.id}" class="wishlist-item-title">${product.name}</a>
+          <a href="product.html?id=${product.id}" class="wishlist-item-title">${product.name}</a>
           <span class="wishlist-item-price">${product.priceLabel}</span>
           <div class="wishlist-item-controls">
             <button type="button" class="btn btn-sm btn-secondary wishlist-move-bag" data-id="${product.id}">
@@ -405,6 +411,16 @@ function initLuxuryChrome() {
     header.classList.add('hero-overlay-header');
   }
   document.querySelector('.tuwano-announcement')?.remove();
+
+  // GitHub Pages hosts this site at /TUWANO/. Normalize root-relative
+  // internal links so navigation also works correctly on the deployed site.
+  const basePath = '/TUWANO';
+  document.querySelectorAll('a[href^="/"]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('//') || href.startsWith('/TUWANO/')) return;
+    link.setAttribute('href', href === '/' ? basePath + '/' : basePath + href);
+  });
+
   if (document.querySelector('.mobile-bottom-nav')) return;
   const nav = document.createElement('nav');
   nav.className = 'mobile-bottom-nav';
