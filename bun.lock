@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "react-example",
+      "name": "tuwano-jewelleries",
       "dependencies": {
         "lucide": "^1.49.0",
       },
