@@ -138,6 +138,11 @@ export function initCartDrawer() {
   const cartWaBtn = document.getElementById('cart-whatsapp-checkout-btn');
   const storeSelector = document.getElementById('cart-store-select');
 
+  if (closeBtn) {
+    closeBtn.innerHTML = '<i data-lucide="arrow-left"></i>';
+    closeBtn.setAttribute('aria-label', 'Back from selection bag');
+  }
+
   function render() {
     const count = store.getCartCount();
     cartBadges.forEach(badge => {
@@ -251,6 +256,7 @@ export function initCartDrawer() {
 
   store.subscribe(render);
   render();
+  refreshLucideIcons();
 
   return { openDrawer, closeDrawer };
 }
