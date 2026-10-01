@@ -46,14 +46,14 @@
 }
 
 .header-logo-img {
-  height: 48px;
+  height: 64px;
   width: auto;
   object-fit: contain;
   transition: height var(--transition-smooth);
 }
 
 .site-header.is-scrolled .header-logo-img {
-  height: 42px;
+  height: 56px;
 }
 
 .header-brand-text {
@@ -189,8 +189,8 @@ svg.lucide {
 .header-action-btn .lucide,
 .header-action-btn [data-lucide],
 .header-action-btn svg.lucide {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .mobile-menu-trigger .lucide,

@@ -244,6 +244,7 @@
 
 .editorial-split-panel {
   padding: clamp(3rem, 6vw, 5rem);
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -493,6 +494,9 @@
 
 .social-handle {
   display: inline-flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-sans);
@@ -501,6 +505,12 @@
   color: var(--color-brand-blue);
   margin-top: 0.5rem;
   transition: opacity var(--transition-fast);
+}
+
+.social-handle .social-brand-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
 }
 
 .social-handle:hover {
@@ -528,24 +538,22 @@
   transition: transform 500ms ease;
 }
 
-.social-gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(13, 22, 88, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-}
-
 .social-gallery-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.035);
 }
 
-.social-gallery-item:hover .social-gallery-overlay {
-  opacity: 1;
+.collection-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.editorial-split-panel .btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 /* ============================================================
