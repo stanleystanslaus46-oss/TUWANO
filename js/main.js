@@ -8,7 +8,18 @@ import { initSearchModal } from './search.js';
 import { getProductById } from './products.js';
 import { createCartWhatsAppUrl, createProductWhatsAppUrl } from './whatsapp.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+export function refreshLucideIcons() {
+  if (typeof window !== 'undefined' && window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons({
+      attrs: {
+        'stroke-width': 1.6,
+      }
+    });
+  }
+}
+
+function initApp() {
+  refreshLucideIcons();
   initStickyHeader();
   initMobileNav();
   initCartDrawer();
@@ -17,7 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initGlobalQuickView();
   initGlobalWishlist();
   initScrollAnimations();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /**
  * Refined Sticky Header Scroll Behavior
@@ -261,7 +278,7 @@ export function openGlobalQuickView(productId) {
           <h2 class="qv-title">${product.name}</h2>
           <div class="qv-price-badge">${product.priceLabel}</div>
           <p class="qv-availability">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <i data-lucide="check" style="width: 14px; height: 14px; stroke-width: 2.2;"></i>
             ${product.availability}
           </p>
         </div>
@@ -318,6 +335,7 @@ export function openGlobalQuickView(productId) {
   modal.classList.add('is-open');
   if (overlay) overlay.classList.add('is-visible');
   document.body.classList.add('lock-scroll');
+  refreshLucideIcons();
 }
 
 function initGlobalQuickView() {

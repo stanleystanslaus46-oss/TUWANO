@@ -10,13 +10,13 @@ export const PRODUCTS = [
     category: "Gold",
     collection: "Chains",
     subcategory: "Necklaces",
-    description: "Handcrafted in solid yellow gold, this Cuban link chain embodies timeless weight and enduring luster. Engineered with hand-filed interlocking links and an integrated box clasp with safety catches.",
+    description: "Crafted in solid yellow gold, this Cuban link chain embodies timeless weight and enduring luster. Engineered with interlocking links and an integrated box clasp with safety catches.",
     details: [
       "Material: Solid Yellow Gold",
       "Link Width: 6.5mm",
       "Closure: Double-safety box clasp",
       "Finish: High polish mirror finish",
-      "Craftsmanship: Hand-assembled and finished"
+      "Craftsmanship: Hand-finished"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -39,7 +39,7 @@ export const PRODUCTS = [
     description: "An exceptional brilliant-cut round solitaire stone securely seated in a four-prong solid gold setting. Slim, tapered shank engineered for comfort and stacking with wedding bands.",
     details: [
       "Material: Fine Solid Gold",
-      "Setting: Four-prong precision basket",
+      "Setting: Classic four-prong setting",
       "Stone: Brilliant Round Cut",
       "Band Profile: Comfort-fit tapered shank",
       "Finish: High polish"
@@ -91,7 +91,7 @@ export const PRODUCTS = [
       "Material: 925 Sterling Silver",
       "Width: 12mm",
       "Profile: Ergonomic concave contour",
-      "Finish: Hand-buffed mirror finish with anti-tarnish treatment",
+      "Finish: Hand-polished luster",
       "Sizing: Adjustable open cuff"
     ],
     price: null,
@@ -150,8 +150,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/collections/collection_silver.jpg",
-      "/assets/images/products/silver_cuff_bangle.jpg"
+      "/assets/images/collections/collection_silver.jpg"
     ],
     tags: ["Silver", "Chains", "Necklaces", "Men", "Unisex"]
   },
@@ -174,8 +173,7 @@ export const PRODUCTS = [
     availability: "In Stock at Mori",
     stores: ["Mori"],
     images: [
-      "/assets/images/collections/collection_silver.jpg",
-      "/assets/images/products/gold_hoop_earrings.jpg"
+      "/assets/images/collections/collection_silver.jpg"
     ],
     tags: ["Silver", "Earrings", "Minimalist"]
   },
@@ -215,7 +213,7 @@ export const PRODUCTS = [
       "Gauge: 16G (1.2mm) / 18G (1.0mm)",
       "Backing: 4mm flat disk back",
       "Suitability: Cartilage, Tragus, Conch, Lobe",
-      "Service: Free installation with in-store piercing appointment"
+      "Service: In-store piercing consultation available"
     ],
     price: null,
     priceLabel: "Price on request",
@@ -271,8 +269,7 @@ export const PRODUCTS = [
     availability: "In Stock at Madukani & Mori",
     stores: ["Madukani", "Mori"],
     images: [
-      "/assets/images/collections/collection_silver.jpg",
-      "/assets/images/products/diamond_gold_ring.jpg"
+      "/assets/images/collections/collection_silver.jpg"
     ],
     tags: ["Silver", "Rings", "Bands", "Modern"]
   },
@@ -323,7 +320,7 @@ export const STORES = [
     phoneClean: "+255679323647",
     whatsappClean: "255679323647",
     image: "/assets/images/stores/madukani.jpg",
-    services: ["Gold & Silver Retail", "Bespoke Jewellery Consultations", "Professional Ear Piercing", "Jewellery Cleaning & Care"]
+    services: ["Gold & Silver Retail", "Bespoke Jewellery Consultations", "Professional Ear Piercing", "Jewellery Care Guidance"]
   },
   {
     id: "mori",
@@ -334,7 +331,7 @@ export const STORES = [
     phoneClean: "+255652562875",
     whatsappClean: "255652562875",
     image: "/assets/images/stores/mori.jpg",
-    services: ["Gold & Silver Collections", "Custom Ring Sizing", "Professional Ear Piercing", "Private Styling Appointments"]
+    services: ["Gold & Silver Collections", "Custom Ring Sizing", "Professional Ear Piercing", "In-Store Consultations"]
   }
 ];
 

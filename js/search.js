@@ -4,6 +4,7 @@
  */
 
 import { searchProducts, PRODUCTS } from './products.js';
+import { refreshLucideIcons } from './main.js';
 
 export function initSearchModal() {
   const overlay = document.getElementById('search-overlay');
@@ -41,6 +42,7 @@ export function initSearchModal() {
       // Show featured items initially
       const featured = PRODUCTS.filter(p => p.featured).slice(0, 4);
       resultsContainer.innerHTML = featured.map(product => renderResultItem(product)).join('');
+      refreshLucideIcons();
     }
   }
 
@@ -53,9 +55,7 @@ export function initSearchModal() {
           <h4 class="search-result-title">${product.name}</h4>
           <span class="search-result-price">${product.priceLabel}</span>
         </div>
-        <svg class="search-result-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
+        <i data-lucide="arrow-right" class="search-result-arrow"></i>
       </a>
     `;
   }
@@ -91,6 +91,7 @@ export function initSearchModal() {
       if (emptyState) emptyState.style.display = 'none';
       if (resultsContainer) {
         resultsContainer.innerHTML = matches.map(p => renderResultItem(p)).join('');
+        refreshLucideIcons();
       }
     }
   }

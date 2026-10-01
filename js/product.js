@@ -5,6 +5,7 @@
 import { PRODUCTS, getProductById } from './products.js';
 import { store } from './cart.js';
 import { createProductWhatsAppUrl, WHATSAPP_NUMBERS } from './whatsapp.js';
+import { refreshLucideIcons } from './main.js';
 
 export function initProductPage() {
   const container = document.getElementById('product-detail-view');
@@ -46,9 +47,7 @@ export function initProductPage() {
         <div class="pdp-main-image-wrap">
           <img src="${product.images[0]}" alt="${product.name}" id="pdp-main-img" class="pdp-main-image" />
           <button type="button" class="pdp-zoom-indicator" aria-label="Click to examine full image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-            </svg>
+            <i data-lucide="zoom-in"></i>
           </button>
         </div>
 
@@ -78,7 +77,7 @@ export function initProductPage() {
           <div class="pdp-price-row">
             <span class="pdp-price">${product.priceLabel}</span>
             <span class="pdp-availability-badge">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <i data-lucide="check" style="width: 13px; height: 13px; stroke-width: 2.2;"></i>
               ${product.availability}
             </span>
           </div>
@@ -113,27 +112,25 @@ export function initProductPage() {
               Add to Selection Bag
             </button>
             <button type="button" id="pdp-wishlist-toggle" class="btn btn-icon ${inWishlist ? 'active' : ''}" aria-label="Save to Wishlist">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="${inWishlist ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.8">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
+              <i data-lucide="heart"></i>
             </button>
           </div>
         </div>
 
-        <!-- Trust Badges & Boutique Guarantees -->
+        <!-- Boutique Services -->
         <div class="pdp-trust-grid">
           <div class="pdp-trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <i data-lucide="clock"></i>
             <div>
               <strong>In-Store Viewing</strong>
               <span>Available daily at Madukani & Mori</span>
             </div>
           </div>
           <div class="pdp-trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <i data-lucide="sparkles"></i>
             <div>
-              <strong>Hand-Selected Quality</strong>
-              <span>Meticulously inspected fine precious metals</span>
+              <strong>Authentic Metals</strong>
+              <span>Selected fine gold and sterling silver</span>
             </div>
           </div>
         </div>
@@ -143,7 +140,7 @@ export function initProductPage() {
           <details class="pdp-accordion-item" open>
             <summary class="pdp-accordion-header">
               <span>Craftsmanship & Specifications</span>
-              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <i data-lucide="chevron-down" class="chevron"></i>
             </summary>
             <div class="pdp-accordion-content">
               <ul class="pdp-spec-list">
@@ -155,7 +152,7 @@ export function initProductPage() {
           <details class="pdp-accordion-item">
             <summary class="pdp-accordion-header">
               <span>Boutique Locations & Consultation</span>
-              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <i data-lucide="chevron-down" class="chevron"></i>
             </summary>
             <div class="pdp-accordion-content">
               <p>Experience this piece in person at our physical stores:</p>
@@ -173,10 +170,10 @@ export function initProductPage() {
           <details class="pdp-accordion-item">
             <summary class="pdp-accordion-header">
               <span>Care & Longevity</span>
-              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <i data-lucide="chevron-down" class="chevron"></i>
             </summary>
             <div class="pdp-accordion-content">
-              <p>Store individual pieces in soft lined compartments to prevent friction. Clean with a dry microfiber cloth and avoid direct contact with perfumes or abrasive chemicals. Complimentary ultrasonic cleaning available for clients at both Tuwano stores.</p>
+              <p>Store individual pieces in soft lined compartments to prevent friction. Clean with a dry microfiber cloth and avoid direct contact with perfumes or abrasive chemicals. Visit our Madukani or Mori stores for personalized jewellery care guidance.</p>
             </div>
           </details>
         </div>
@@ -254,4 +251,6 @@ export function initProductPage() {
       `).join('');
     }
   }
+
+  refreshLucideIcons();
 }

@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/pages.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
+    <!-- Lucide Icons -->
+    <script src="/js/vendor/lucide.min.js"></script>
   </head>
   <body>
     <!-- Top Bar Header -->
@@ -51,20 +53,10 @@
           </nav>
 
           <div class="header-actions">
-            <button type="button" class="header-action-btn open-search-btn" aria-label="Search catalogue">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <button type="button" class="header-action-btn open-wishlist-btn" aria-label="View saved items">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              <span class="badge-count wishlist-count-badge">0</span>
-            </button>
-            <button type="button" class="header-action-btn open-cart-btn" aria-label="View selection bag">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              <span class="badge-count cart-count-badge">0</span>
-            </button>
-            <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open menu">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
-            </button>
+            <button type="button" class="header-action-btn open-search-btn" aria-label="Search catalogue"><i data-lucide="search"></i></button>
+            <button type="button" class="header-action-btn open-wishlist-btn" aria-label="View saved items"><i data-lucide="heart"></i><span class="badge-count wishlist-count-badge">0</span></button>
+            <button type="button" class="header-action-btn open-cart-btn" aria-label="View selection bag"><i data-lucide="shopping-bag"></i><span class="badge-count cart-count-badge">0</span></button>
+            <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open navigation menu"><i data-lucide="menu"></i></button>
           </div>
         </div>
       </div>
@@ -78,9 +70,7 @@
           <img src="/assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" style="height: 38px;" />
           <span class="header-brand-title" style="font-size: 1.15rem;">TUWANO</span>
         </div>
-        <button type="button" class="drawer-close-btn" id="mobile-menu-close" aria-label="Close navigation">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+        <button type="button" class="drawer-close-btn" id="mobile-menu-close" aria-label="Close navigation menu"><i data-lucide="x"></i></button>
       </div>
       <div class="drawer-body">
         <nav style="display: flex; flex-direction: column; gap: 1.25rem;">
@@ -154,11 +144,11 @@
       <div class="search-modal-card">
         <div class="search-modal-header">
           <div class="search-input-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <i data-lucide="search" style="color: var(--color-text-muted);"></i>
             <input type="text" id="search-input" class="search-input-field" placeholder="Search jewellery..." autocomplete="off" />
           </div>
           <button type="button" id="search-clear-btn" style="display: none; font-size: 0.8125rem; color: var(--color-text-muted);">Clear</button>
-          <button type="button" class="drawer-close-btn" id="search-close-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+          <button type="button" class="drawer-close-btn" id="search-close-btn" aria-label="Close search"><i data-lucide="x"></i></button>
         </div>
         <div class="search-modal-body">
           <div class="search-popular-tags" id="search-popular-tags">
@@ -177,7 +167,7 @@
     <div class="side-drawer" id="cart-drawer">
       <div class="drawer-header">
         <h3 class="drawer-title">Selection Bag</h3>
-        <button type="button" class="drawer-close-btn" id="cart-close-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        <button type="button" class="drawer-close-btn" id="cart-close-btn" aria-label="Close selection bag"><i data-lucide="x"></i></button>
       </div>
       <div class="drawer-body">
         <div id="cart-empty-state" class="drawer-empty" style="display: flex;">
@@ -202,7 +192,7 @@
     <div class="side-drawer" id="wishlist-drawer">
       <div class="drawer-header">
         <h3 class="drawer-title">Saved Pieces</h3>
-        <button type="button" class="drawer-close-btn" id="wishlist-close-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        <button type="button" class="drawer-close-btn" id="wishlist-close-btn" aria-label="Close saved items"><i data-lucide="x"></i></button>
       </div>
       <div class="drawer-body">
         <div id="wishlist-empty-state" class="drawer-empty" style="display: flex;"><p>No saved pieces yet.</p></div>
@@ -216,7 +206,7 @@
     <!-- Quick View Dialog -->
     <div class="drawer-overlay" id="quick-view-overlay"></div>
     <div class="quick-view-dialog" id="quick-view-modal">
-      <button type="button" class="qv-close-btn" id="quick-view-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+      <button type="button" class="qv-close-btn" id="quick-view-close" aria-label="Close quick view"><i data-lucide="x"></i></button>
       <div id="quick-view-content"></div>
     </div>
 
