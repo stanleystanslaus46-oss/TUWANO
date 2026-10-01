@@ -1,12 +1,12 @@
 /**
  * TUWANO JEWELLERIES — Global Site Controller
- * Orchestrates navigation, drawers, sticky headers, wishlist modal, and micro-interactions.
+ * Orchestrates navigation, drawers, sticky headers, wishlist modal, quick view, and micro-interactions.
  */
 
 import { initCartDrawer, store } from './cart.js';
 import { initSearchModal } from './search.js';
 import { getProductById } from './products.js';
-import { createCartWhatsAppUrl } from './whatsapp.js';
+import { createCartWhatsAppUrl, createProductWhatsAppUrl } from './whatsapp.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCartDrawer();
   initSearchModal();
   initWishlistDrawer();
+  initGlobalQuickView();
+  initGlobalWishlist();
   initScrollAnimations();
 });
 
@@ -67,7 +69,6 @@ function initMobileNav() {
   if (closeBtn) closeBtn.addEventListener('click', closeNav);
   if (overlay) overlay.addEventListener('click', closeNav);
 
-  // Close nav when clicking links inside drawer
   if (drawer) {
     drawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeNav);
@@ -193,6 +194,160 @@ function initWishlistDrawer() {
 
   store.subscribe(render);
   render();
+}
+
+/**
+ * Global Wishlist Click Delegation & Icon Syncing
+ */
+function initGlobalWishlist() {
+  document.addEventListener('click', (e) => {
+    const wishBtn = e.target.closest('.wishlist-btn');
+    if (!wishBtn) return;
+    e.preventDefault();
+    const id = wishBtn.dataset.id;
+    if (!id) return;
+    const added = store.toggleWishlist(id);
+    wishBtn.classList.toggle('active', added);
+    const icon = wishBtn.querySelector('svg');
+    if (icon) icon.setAttribute('fill', added ? 'currentColor' : 'none');
+  });
+
+  // Re-sync all wishlist icons on store update
+  store.subscribe(() => {
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      const id = btn.dataset.id;
+      if (id) {
+        const inWishlist = store.isInWishlist(id);
+        btn.classList.toggle('active', inWishlist);
+        const icon = btn.querySelector('svg');
+        if (icon) icon.setAttribute('fill', inWishlist ? 'currentColor' : 'none');
+      }
+    });
+  });
+}
+
+/**
+ * Global Quick View Dialog Handler
+ */
+export function openGlobalQuickView(productId) {
+  const modal = document.getElementById('quick-view-modal');
+  const overlay = document.getElementById('quick-view-overlay');
+  const content = document.getElementById('quick-view-content');
+  if (!modal || !content) return;
+
+  const product = getProductById(productId);
+  if (!product) return;
+
+  const waUrl = createProductWhatsAppUrl(product, 'primary');
+
+  content.innerHTML = `
+    <div class="qv-grid">
+      <div class="qv-gallery">
+        <img src="${product.images[0]}" alt="${product.name}" id="qv-main-img" class="qv-main-image" />
+        ${product.images.length > 1 ? `
+          <div class="qv-thumbs">
+            ${product.images.map((img, idx) => `
+              <button type="button" class="qv-thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${img}">
+                <img src="${img}" alt="Thumbnail ${idx + 1}" />
+              </button>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+
+      <div class="qv-info">
+        <div class="qv-header">
+          <span class="qv-category">${product.category} · ${product.collection}</span>
+          <h2 class="qv-title">${product.name}</h2>
+          <div class="qv-price-badge">${product.priceLabel}</div>
+          <p class="qv-availability">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            ${product.availability}
+          </p>
+        </div>
+
+        <p class="qv-description">${product.description}</p>
+
+        <ul class="qv-details-list">
+          ${product.details.map(d => `<li>${d}</li>`).join('')}
+        </ul>
+
+        <div class="qv-actions">
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block qv-wa-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            Enquire on WhatsApp
+          </a>
+
+          <div class="qv-secondary-actions">
+            <button type="button" class="btn btn-secondary btn-block qv-add-bag" data-id="${product.id}">
+              Add to Selection Bag
+            </button>
+            <a href="/product.html?id=${product.id}" class="qv-view-full">
+              View Full Product Details →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Thumbnail switcher
+  content.querySelectorAll('.qv-thumb-btn').forEach(tb => {
+    tb.addEventListener('click', () => {
+      content.querySelectorAll('.qv-thumb-btn').forEach(b => b.classList.remove('active'));
+      tb.classList.add('active');
+      const mainImg = content.querySelector('#qv-main-img');
+      if (mainImg) mainImg.src = tb.dataset.src;
+    });
+  });
+
+  // Add to bag
+  const addBagBtn = content.querySelector('.qv-add-bag');
+  if (addBagBtn) {
+    addBagBtn.addEventListener('click', () => {
+      store.addToCart(product.id, 1);
+      addBagBtn.textContent = "Added to Bag ✓";
+      setTimeout(() => {
+        addBagBtn.textContent = "Add to Selection Bag";
+      }, 1500);
+    });
+  }
+
+  modal.classList.add('is-open');
+  if (overlay) overlay.classList.add('is-visible');
+  document.body.classList.add('lock-scroll');
+}
+
+function initGlobalQuickView() {
+  const modal = document.getElementById('quick-view-modal');
+  const overlay = document.getElementById('quick-view-overlay');
+  const closeBtn = document.getElementById('quick-view-close');
+
+  function close() {
+    if (modal) modal.classList.remove('is-open');
+    if (overlay) overlay.classList.remove('is-visible');
+    document.body.classList.remove('lock-scroll');
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (overlay) overlay.addEventListener('click', close);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+      close();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const qvBtn = e.target.closest('.quick-view-btn');
+    if (qvBtn) {
+      e.preventDefault();
+      const id = qvBtn.dataset.id;
+      if (id) openGlobalQuickView(id);
+    }
+  });
 }
 
 /**

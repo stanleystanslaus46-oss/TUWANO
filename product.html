@@ -156,7 +156,11 @@
     <script type="module" src="/js/main.js"></script>
     <script type="module">
       import { initProductPage } from '/js/product.js';
-      document.addEventListener('DOMContentLoaded', initProductPage);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initProductPage);
+      } else {
+        initProductPage();
+      }
     </script>
   </body>
 </html>

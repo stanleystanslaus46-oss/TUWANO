@@ -280,9 +280,11 @@
     <script type="module" src="/js/main.js"></script>
     <script type="module">
       import { initShopPage } from '/js/shop.js';
-      document.addEventListener('DOMContentLoaded', () => {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => initShopPage());
+      } else {
         initShopPage();
-      });
+      }
     </script>
   </body>
 </html>

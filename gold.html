@@ -261,13 +261,16 @@
     <script type="module" src="/js/main.js"></script>
     <script type="module">
       import { initShopPage } from '/js/shop.js';
-      // Pre-set URL filter if not already set
       if (!window.location.search.includes('category=')) {
         const u = new URL(window.location);
         u.searchParams.set('category', 'gold');
         window.history.replaceState({}, '', u);
       }
-      document.addEventListener('DOMContentLoaded', initShopPage);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => initShopPage('gold'));
+      } else {
+        initShopPage('gold');
+      }
     </script>
   </body>
 </html>

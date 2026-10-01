@@ -237,7 +237,11 @@
         u.searchParams.set('category', 'silver');
         window.history.replaceState({}, '', u);
       }
-      document.addEventListener('DOMContentLoaded', initShopPage);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => initShopPage('silver'));
+      } else {
+        initShopPage('silver');
+      }
     </script>
   </body>
 </html>

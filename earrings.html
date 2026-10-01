@@ -174,7 +174,11 @@
         u.searchParams.set('category', 'earrings');
         window.history.replaceState({}, '', u);
       }
-      document.addEventListener('DOMContentLoaded', initShopPage);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => initShopPage('earrings'));
+      } else {
+        initShopPage('earrings');
+      }
     </script>
   </body>
 </html>

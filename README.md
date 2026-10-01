@@ -45,7 +45,7 @@ tuwano-jewelleries/
 │       ├── piercing/         # Curated ear styling studio photography
 │       └── stores/           # Madukani & Mori architectural boutique photos
 ├── metadata.json
-├── vite.config.ts
+├── vite.config.js
 └── README.md
 ```
 
