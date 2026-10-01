@@ -147,8 +147,8 @@ export function initProductPage() {
           <div class="pdp-trust-item">
             <i data-lucide="sparkles"></i>
             <div>
-              <strong>Authentic Metals</strong>
-              <span>Selected fine gold and sterling silver</span>
+              <strong>Materials</strong>
+              <span>Gold and sterling silver selections</span>
             </div>
           </div>
         </div>
