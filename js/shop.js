@@ -126,7 +126,7 @@ export function initShopPage(defaultCategory = null) {
         <article class="product-card" data-id="${product.id}">
           <div class="product-card-media">
             <a href="/product.html?id=${product.id}" class="product-card-link" aria-label="${product.name}">
-              <img src="${product.images[0]}" alt="${product.name}" class="product-card-img primary" loading="lazy" decoding="async" width="900" height="900" />
+              ${product.images[0] ? `<img src="${product.images[0]}" alt="${product.name}" class="product-card-img primary" loading="lazy" decoding="async" width="900" height="900" />` : `<span class="product-card-image-placeholder" aria-label="Product photography not currently available"><i data-lucide="image-off" aria-hidden="true"></i><span>Product photography coming soon</span></span>`}
               ${product.images[1] ? `<img src="${product.images[1]}" alt="" class="product-card-img secondary" loading="lazy" decoding="async" aria-hidden="true" width="900" height="900" />` : ''}
             </a>
             
