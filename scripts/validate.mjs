@@ -52,4 +52,3 @@ if (failures.length) {
 }
 
 console.log(`Tuwano static validation passed: ${pages.length} pages checked.`);
-
