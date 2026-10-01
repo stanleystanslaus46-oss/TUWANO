@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" width="100%" height="100%">
+  <!-- Tuwano Jewellers Light / Warm Ivory Edition for Dark Surfaces -->
+  <defs>
+    <style>
+      .brand-light { fill: #fdfbf7; }
+      .brand-facet-light { fill: #fdfbf7; }
+    </style>
+  </defs>
+
+  <g transform="translate(100, 20)">
+    <polygon points="10,88 95,36 125,88" class="brand-facet-light"/>
+    <polygon points="390,88 305,36 275,88" class="brand-facet-light"/>
+    <polygon points="10,88 0,88 95,36" class="brand-facet-light"/>
+    <polygon points="390,88 400,88 305,36" class="brand-facet-light"/>
+    <polygon points="95,36 305,36 275,88 125,88" fill="none" stroke="#fdfbf7" stroke-width="12" stroke-linejoin="round"/>
+    
+    <polygon points="0,88 200,275 80,88" class="brand-facet-light" fill-opacity="0.95"/>
+    <polygon points="400,88 200,275 320,88" class="brand-facet-light" fill-opacity="0.95"/>
+    
+    <polygon points="95,36 305,36 400,88 200,275 0,88" fill="none" stroke="#fdfbf7" stroke-width="15" stroke-linejoin="round"/>
+    
+    <line x1="125" y1="88" x2="200" y2="275" stroke="#fdfbf7" stroke-width="12" stroke-linecap="round"/>
+    <line x1="275" y1="88" x2="200" y2="275" stroke="#fdfbf7" stroke-width="12" stroke-linecap="round"/>
+    <line x1="0" y1="88" x2="400" y2="88" stroke="#fdfbf7" stroke-width="12"/>
+
+    <path d="M 135 102 L 265 102 L 265 116 L 252 120 L 252 125 L 148 125 L 148 120 L 135 116 Z" class="brand-facet-light"/>
+    <rect x="140" y="104" width="120" height="15" class="brand-facet-light" rx="1"/>
+    <path d="M 188 120 L 212 120 L 212 215 C 212 238 205 255 185 264 C 172 270 156 268 145 260 C 137 254 134 246 137 240 C 141 234 150 234 155 240 C 162 248 175 250 182 243 C 189 236 190 226 190 215 L 190 120 Z" class="brand-facet-light"/>
+  </g>
+
+  <text x="300" y="380" text-anchor="middle" font-family="'Times New Roman', Times, 'Cinzel', serif" font-weight="900" font-size="76" letter-spacing="4" fill="#fdfbf7">TUWANO</text>
+
+  <g transform="translate(300, 445)">
+    <line x1="-240" y1="-14" x2="-145" y2="-14" stroke="#fdfbf7" stroke-width="9" stroke-linecap="square"/>
+    <line x1="-240" y1="2" x2="-145" y2="2" stroke="#fdfbf7" stroke-width="9" stroke-linecap="square"/>
+
+    <text x="0" y="0" text-anchor="middle" font-family="'Times New Roman', Times, 'Cormorant Garamond', 'Baskerville', serif" font-style="italic" font-weight="600" font-size="52" letter-spacing="1.5" fill="#fdfbf7">Jewellers</text>
+
+    <line x1="145" y1="-14" x2="240" y2="-14" stroke="#fdfbf7" stroke-width="9" stroke-linecap="square"/>
+    <line x1="145" y1="2" x2="240" y2="2" stroke="#fdfbf7" stroke-width="9" stroke-linecap="square"/>
+  </g>
+</svg>

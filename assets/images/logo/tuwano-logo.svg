@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" width="100%" height="100%">
+  <!-- Tuwano Jewellers Official Brand Vector Logo -->
+  <defs>
+    <style>
+      .brand-blue { fill: #0d1658; }
+      .brand-stroke { stroke: #0d1658; stroke-width: 14; stroke-linejoin: round; stroke-linecap: round; }
+      .brand-facet { fill: #0d1658; }
+    </style>
+  </defs>
+
+  <!-- Diamond Geometry -->
+  <g transform="translate(100, 20)">
+    <!-- Outer Diamond Contour -->
+    <!-- Table & Crown -->
+    <!-- Top flat table: (70, 36) to (330, 36) -->
+    <!-- Top corners: (10, 85), (390, 85) -->
+    <!-- Girdle points: (0, 88) to (400, 88) -->
+    <!-- Pavilion tip: (200, 275) -->
+
+    <!-- Upper Crown facet triangles -->
+    <!-- Left crown corner -->
+    <polygon points="10,88 95,36 125,88" class="brand-facet"/>
+    <!-- Right crown corner -->
+    <polygon points="390,88 305,36 275,88" class="brand-facet"/>
+    <!-- Far left edge triangle -->
+    <polygon points="10,88 0,88 95,36" class="brand-facet"/>
+    <!-- Far right edge triangle -->
+    <polygon points="390,88 400,88 305,36" class="brand-facet"/>
+    <!-- Center top table trapezoid / triangles -->
+    <polygon points="95,36 305,36 275,88 125,88" fill="none" stroke="#0d1658" stroke-width="12" stroke-linejoin="round"/>
+    
+    <!-- Pavilion facet triangles -->
+    <!-- Outer left pavilion wedge -->
+    <polygon points="0,88 200,275 80,88" class="brand-facet" fill-opacity="0.95"/>
+    <!-- Outer right pavilion wedge -->
+    <polygon points="400,88 200,275 320,88" class="brand-facet" fill-opacity="0.95"/>
+    
+    <!-- Outer Diamond Outline & Internal Ribs -->
+    <polygon points="95,36 305,36 400,88 200,275 0,88" fill="none" stroke="#0d1658" stroke-width="15" stroke-linejoin="round"/>
+    
+    <!-- Pavilion Rib lines to culet -->
+    <line x1="125" y1="88" x2="200" y2="275" stroke="#0d1658" stroke-width="12" stroke-linecap="round"/>
+    <line x1="275" y1="88" x2="200" y2="275" stroke="#0d1658" stroke-width="12" stroke-linecap="round"/>
+    <line x1="0" y1="88" x2="400" y2="88" stroke="#0d1658" stroke-width="12"/>
+
+    <!-- Central Classical T-J Monogram Pillar -->
+    <!-- T top bar with classical pedestal serifs -->
+    <path d="M 135 102 L 265 102 L 265 116 L 252 120 L 252 125 L 148 125 L 148 120 L 135 116 Z" class="brand-facet"/>
+    <rect x="140" y="104" width="120" height="15" class="brand-facet" rx="1"/>
+    <!-- T stem curving gracefully into J hook -->
+    <path d="M 188 120 L 212 120 L 212 215 C 212 238 205 255 185 264 C 172 270 156 268 145 260 C 137 254 134 246 137 240 C 141 234 150 234 155 240 C 162 248 175 250 182 243 C 189 236 190 226 190 215 L 190 120 Z" class="brand-facet"/>
+  </g>
+
+  <!-- TUWANO Wordmark -->
+  <!-- Heavy Roman bold serif lettering with solid architectural presence -->
+  <text x="300" y="380" text-anchor="middle" font-family="'Times New Roman', Times, 'Cinzel', serif" font-weight="900" font-size="76" letter-spacing="4" fill="#0d1658">TUWANO</text>
+
+  <!-- "= Jewellers =" Subtitle with double bars -->
+  <g transform="translate(300, 445)">
+    <!-- Left double bar -->
+    <line x1="-240" y1="-14" x2="-145" y2="-14" stroke="#0d1658" stroke-width="9" stroke-linecap="square"/>
+    <line x1="-240" y1="2" x2="-145" y2="2" stroke="#0d1658" stroke-width="9" stroke-linecap="square"/>
+
+    <!-- Jewellers wordmark -->
+    <text x="0" y="0" text-anchor="middle" font-family="'Times New Roman', Times, 'Cormorant Garamond', 'Baskerville', serif" font-style="italic" font-weight="600" font-size="52" letter-spacing="1.5" fill="#0d1658">Jewellers</text>
+
+    <!-- Right double bar -->
+    <line x1="145" y1="-14" x2="240" y2="-14" stroke="#0d1658" stroke-width="9" stroke-linecap="square"/>
+    <line x1="145" y1="2" x2="240" y2="2" stroke="#0d1658" stroke-width="9" stroke-linecap="square"/>
+  </g>
+</svg>
