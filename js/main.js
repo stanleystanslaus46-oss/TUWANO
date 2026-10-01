@@ -333,7 +333,7 @@ export function openGlobalQuickView(productId) {
             <button type="button" class="btn btn-secondary btn-block qv-add-bag" data-id="${product.id}">
               Add to Selection Bag
             </button>
-            <a href="/product.html?id=${product.id}" class="qv-view-full">
+            <a href="product.html?id=${product.id}" class="qv-view-full">
               View Full Product Details →
             </a>
           </div>
@@ -444,7 +444,7 @@ function initLuxuryChrome() {
   const nav = document.createElement('nav');
   nav.className = 'mobile-bottom-nav';
   nav.setAttribute('aria-label','Mobile quick navigation');
-  nav.innerHTML = `<a href="/" data-mobile-nav="home"><i data-lucide="house"></i><span>Home</span></a><a href="/shop.html" data-mobile-nav="shop"><i data-lucide="grid-2x2"></i><span>Shop</span></a><button type="button" data-mobile-nav="search"><i data-lucide="search"></i><span>Search</span></button><button type="button" data-mobile-nav="wishlist"><i data-lucide="heart"></i><span>Saved</span><span class="mobile-nav-badge wishlist-count-badge"></span></button><button type="button" data-mobile-nav="bag"><i data-lucide="shopping-bag"></i><span>Bag</span><span class="mobile-nav-badge cart-count-badge"></span></button>`;
+  nav.innerHTML = `<a href="./" data-mobile-nav="home"><i data-lucide="house"></i><span>Home</span></a><a href="shop.html" data-mobile-nav="shop"><i data-lucide="grid-2x2"></i><span>Shop</span></a><button type="button" data-mobile-nav="search"><i data-lucide="search"></i><span>Search</span></button><button type="button" data-mobile-nav="wishlist"><i data-lucide="heart"></i><span>Saved</span><span class="mobile-nav-badge wishlist-count-badge"></span></button><button type="button" data-mobile-nav="bag"><i data-lucide="shopping-bag"></i><span>Bag</span><span class="mobile-nav-badge cart-count-badge"></span></button>`;
   document.body.appendChild(nav);
   nav.querySelector('[data-mobile-nav="search"]')?.addEventListener('click',()=>document.querySelector('.open-search-btn')?.click());
   nav.querySelector('[data-mobile-nav="wishlist"]')?.addEventListener('click',()=>document.querySelector('.open-wishlist-btn')?.click());
