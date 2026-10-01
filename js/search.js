@@ -49,7 +49,7 @@ export function initSearchModal() {
   function renderResultItem(product) {
     return `
       <a href="/product.html?id=${product.id}" class="search-result-item">
-        <img src="${product.images[0]}" alt="${product.name}" class="search-result-thumb" loading="lazy" />
+        ${product.images[0] ? `<img src="${product.images[0]}" alt="${product.name}" class="search-result-thumb" loading="lazy" />` : `<span class="search-result-thumb search-result-thumb--placeholder" aria-hidden="true"><i data-lucide="image-off"></i></span>`}
         <div class="search-result-info">
           <span class="search-result-cat">${product.category} · ${product.collection}</span>
           <h4 class="search-result-title">${product.name}</h4>
