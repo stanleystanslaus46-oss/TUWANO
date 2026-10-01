@@ -179,11 +179,11 @@
       import { initShopPage } from '/js/shop.js';
       if (!window.location.search.includes('category=')) {
         const u = new URL(window.location);
-        u.searchParams.set('category', 'necklaces');
+        u.searchParams.set('category', 'necklaces-chains');
         window.history.replaceState({}, '', u);
       }
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => initShopPage('necklaces'));
+        document.addEventListener('DOMContentLoaded', () => initShopPage('necklaces-chains'));
       } else {
         initShopPage('necklaces');
       }
