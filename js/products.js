@@ -351,6 +351,7 @@ export function searchProducts(query) {
     p.category.toLowerCase().includes(q) ||
     p.collection.toLowerCase().includes(q) ||
     p.description.toLowerCase().includes(q) ||
+    p.details.some(detail => detail.toLowerCase().includes(q)) ||
     p.tags.some(t => t.toLowerCase().includes(q))
   );
 }
