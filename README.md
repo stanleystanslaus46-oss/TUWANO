@@ -93,6 +93,19 @@ Store contact routing is centralized in `js/whatsapp.js` and store information i
 
 When changing business contact information, update the central source rather than duplicating numbers across pages.
 
+## Release status
+
+- Phase 1 — project cleanup: complete
+- Phase 2 — Lucide interface icon system: complete
+- Phase 3 — catalogue and image integrity: complete
+- Phase 4 — content integrity: complete
+- Phase 5 — static technical QA: complete
+- Phase 6 — responsive UX and interaction QA: complete
+- Phase 7 — SEO and performance hardening: complete
+- Phase 8 — release-readiness checks: complete
+
+Production browser/device testing and a successful local production build must still be run in the deployment environment before declaring the release fully verified.
+
 ## Deployment
 
 The project is suitable for static hosting platforms such as Netlify, Vercel, or Cloudflare Pages.
