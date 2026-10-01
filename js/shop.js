@@ -67,7 +67,7 @@ export function initShopPage(defaultCategory = null) {
       const f = activeFilter.toLowerCase();
       list = list.filter(p => {
         if (f === 'necklaces-chains') return p.collection === 'Necklaces' || p.collection === 'Chains';
-        return p.category.toLowerCase() === f || p.collection.toLowerCase() === f || p.tags.some(t => t.toLowerCase() === f);
+        return p.category.toLowerCase() === f || p.collection.toLowerCase() === f;
       });
     }
 
