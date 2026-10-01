@@ -1336,3 +1336,40 @@ svg.lucide {
   opacity: 0.8;
   letter-spacing: 0.02em;
 }
+
+.search-result-thumb--placeholder,
+.wishlist-item-img--placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f1ed;
+  color: var(--color-brand-blue);
+}
+.search-result-thumb--placeholder svg,
+.wishlist-item-img--placeholder svg {
+  width: 22px;
+  height: 22px;
+  opacity: 0.5;
+}
+.qv-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  background: #f6f5f1;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.qv-image-placeholder svg {
+  width: 30px;
+  height: 30px;
+  color: var(--color-brand-blue);
+  opacity: 0.5;
+}
