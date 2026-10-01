@@ -159,7 +159,7 @@ export function initCartDrawer() {
 
     cartItemsContainer.innerHTML = store.cart.map(item => `
       <div class="cart-item" data-id="${item.id}">
-        <img src="${item.image}" alt="${item.name}" class="cart-item-img" loading="lazy" />
+        ${item.image ? `<img src="${item.image}" alt="${item.name}" class="cart-item-img" loading="lazy" />` : `<span class="cart-item-img cart-item-img--placeholder" aria-hidden="true"><i data-lucide="image-off"></i></span>`}
         <div class="cart-item-details">
           <span class="cart-item-cat">${item.category}</span>
           <a href="/product.html?id=${item.id}" class="cart-item-title">${item.name}</a>
