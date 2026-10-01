@@ -251,9 +251,7 @@ export const PRODUCTS = [
     featured: false,
     availability: "In Stock at Madukani & Mori",
     stores: ["Madukani", "Mori"],
-    images: [
-      "/assets/images/collections/collection_silver.jpg"
-    ],
+    images: [],
     tags: ["Silver", "Rings", "Bands", "Modern"]
   },
   {
