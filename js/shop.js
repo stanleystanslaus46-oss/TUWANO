@@ -16,7 +16,7 @@ export function initShopPage(defaultCategory = null) {
 
   // Read URL query params: ?category=gold or ?sort=name-asc
   const urlParams = new URLSearchParams(window.location.search);
-  let activeFilter = urlParams.get('category') || defaultCategory || 'all';
+  let activeFilter = (urlParams.get('category') || defaultCategory || 'all').toLowerCase();
   let activeSort = urlParams.get('sort') || 'featured';
 
   // Mark active filter button
@@ -65,11 +65,10 @@ export function initShopPage(defaultCategory = null) {
 
     if (activeFilter !== 'all') {
       const f = activeFilter.toLowerCase();
-      list = list.filter(p => 
-        p.category.toLowerCase() === f ||
-        p.collection.toLowerCase() === f ||
-        p.tags.some(t => t.toLowerCase() === f)
-      );
+      list = list.filter(p => {
+        if (f === 'necklaces-chains') return p.collection === 'Necklaces' || p.collection === 'Chains';
+        return p.category.toLowerCase() === f || p.collection.toLowerCase() === f || p.tags.some(t => t.toLowerCase() === f);
+      });
     }
 
     // Sort
@@ -99,7 +98,8 @@ export function initShopPage(defaultCategory = null) {
     }
 
     if (activeFilterLabel) {
-      activeFilterLabel.textContent = activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1);
+      const filterLabels = { all: 'All Jewellery', gold: 'Gold', silver: 'Silver', rings: 'Rings', necklaces: 'Necklaces', chains: 'Chains', 'necklaces-chains': 'Necklaces & Chains', bracelets: 'Bracelets', earrings: 'Earrings' };
+      activeFilterLabel.textContent = filterLabels[activeFilter] || activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1);
     }
 
     if (items.length === 0) {
