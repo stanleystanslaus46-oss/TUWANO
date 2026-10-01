@@ -12,8 +12,8 @@ export function initProductPage() {
   if (!container) return;
 
   const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id') || 'tj-gold-001';
-  let product = getProductById(productId);
+  const productId = urlParams.get('id');
+  let product = productId ? getProductById(productId) : null;
 
   // Invalid IDs should not silently display another product.
   if (!product) {
@@ -58,7 +58,7 @@ export function initProductPage() {
     `;
   }
 
-  let selectedStore = 'primary';
+  let selectedStore = product.stores[0].toLowerCase();
   const inWishlist = store.isInWishlist(product.id);
 
   container.innerHTML = `
@@ -75,7 +75,7 @@ export function initProductPage() {
         ${product.images.length > 1 ? `
           <div class="pdp-thumbnails" role="tablist" aria-label="Product thumbnails">
             ${product.images.map((img, idx) => `
-              <button type="button" class="pdp-thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${img}" role="tab" aria-selected="${idx === 0}" aria-label="View view ${idx + 1}">
+              <button type="button" class="pdp-thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${img}" role="tab" aria-selected="${idx === 0}" aria-label="View image ${idx + 1}">
                 <img src="${img}" alt="${idx === 0 ? product.name : `${product.name} gallery image ${idx + 1}`}" loading="lazy" decoding="async" width="160" height="160" />
               </button>
             `).join('')}
@@ -113,8 +113,7 @@ export function initProductPage() {
           <label for="pdp-store-select" class="pdp-store-label">Consulting Boutique:</label>
           <div class="pdp-select-wrapper">
             <select id="pdp-store-select" class="pdp-select">
-              <option value="madukani" ${selectedStore === 'madukani' ? 'selected' : ''}>Madukani Store (09:00 AM – 06:00 PM · 0679 323 647)</option>
-              <option value="mori" ${selectedStore === 'mori' ? 'selected' : ''}>Mori Store (09:00 AM – 07:30 PM · 0652 562 875)</option>
+              ${product.stores.map(storeName => { const key = storeName.toLowerCase(); const details = key === "madukani" ? "09:00 AM – 06:00 PM · 0679 323 647" : "09:00 AM – 07:30 PM · 0652 562 875"; return `<option value="${key}" ${selectedStore === key ? "selected" : ""}>${storeName} Store (${details})</option>`; }).join("")}
             </select>
           </div>
         </div>
@@ -142,7 +141,7 @@ export function initProductPage() {
             <i data-lucide="clock"></i>
             <div>
               <strong>In-Store Viewing</strong>
-              <span>Available daily at Madukani & Mori</span>
+              <span>Available at ${product.stores.join(' & ')}</span>
             </div>
           </div>
           <div class="pdp-trust-item">
@@ -174,15 +173,8 @@ export function initProductPage() {
               <i data-lucide="chevron-down" class="chevron"></i>
             </summary>
             <div class="pdp-accordion-content">
-              <p>Experience this piece in person at our physical stores:</p>
-              <div class="store-mini-card">
-                <strong>Madukani Store</strong>
-                <p>09:00 AM – 06:00 PM · Direct Tel: <a href="tel:0679323647">0679 323 647</a></p>
-              </div>
-              <div class="store-mini-card">
-                <strong>Mori Store</strong>
-                <p>09:00 AM – 07:30 PM · Direct Tel: <a href="tel:0652562875">0652 562 875</a></p>
-              </div>
+              <p>Experience this piece in person at the available Tuwano store:</p>
+              ${product.stores.map(storeName => storeName === "Madukani" ? `<div class="store-mini-card"><strong>Madukani Store</strong><p>09:00 AM – 06:00 PM · Direct Tel: <a href="tel:0679323647">0679 323 647</a></p></div>` : `<div class="store-mini-card"><strong>Mori Store</strong><p>09:00 AM – 07:30 PM · Direct Tel: <a href="tel:0652562875">0652 562 875</a></p></div>`).join("")}
             </div>
           </details>
 
