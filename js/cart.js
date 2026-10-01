@@ -167,7 +167,7 @@ export function initCartDrawer() {
         ${item.image ? `<img src="${item.image}" alt="${item.name}" class="cart-item-img" loading="lazy" />` : `<span class="cart-item-img cart-item-img--placeholder" aria-hidden="true"><i data-lucide="image-off"></i></span>`}
         <div class="cart-item-details">
           <span class="cart-item-cat">${item.category}</span>
-          <a href="/product.html?id=${item.id}" class="cart-item-title">${item.name}</a>
+          <a href="product.html?id=${item.id}" class="cart-item-title">${item.name}</a>
           <span class="cart-item-price">${item.priceLabel}</span>
           <div class="cart-item-controls">
             <div class="qty-stepper">
