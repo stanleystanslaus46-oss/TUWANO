@@ -2206,3 +2206,15 @@ svg.lucide {
   .tuwano-testimonial-slide blockquote { font-size: 1.35rem; line-height: 1.45; }
   .tuwano-testimonial-controls { margin-top: .4rem; }
 }
+
+
+/* Distinct background for customer testimonials — visually separate from Curated Highlights */
+.tuwano-testimonials {
+  position: relative;
+  max-width: none;
+  margin-top: clamp(4rem, 8vw, 7rem);
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 4vw, 2rem);
+  background: #f2ede3;
+  border-top: 1px solid rgba(23,23,23,.08);
+  border-bottom: 1px solid rgba(23,23,23,.08);
+}
