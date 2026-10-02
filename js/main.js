@@ -22,7 +22,7 @@ const TUWANO_ICON_SVGS = {
 
 const TUWANO_ICON_SVGS_EXTRA = {
   eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>',
-  repeat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/>',
+  repeat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg>',
   coins: '<circle cx="9" cy="9" r="5"></circle><circle cx="15" cy="15" r="5"></circle><path d="M9 6v6M6 9h6"></path>',
   gem: '<path d="m6 3 12 0 3 5-9 13L3 8 6 3Z"></path><path d="m3 8 18 0"></path><path d="m9 3 3 5 3-5"></path>',
   'circle-dot': '<circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2"></circle>',
