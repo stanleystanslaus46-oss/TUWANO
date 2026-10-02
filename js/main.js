@@ -183,6 +183,12 @@ function initStickyHeader() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
+  // Homepage hero header stays a static transparent overlay, matching the Shinao presentation.
+  if (header.classList.contains('hero-overlay-header')) {
+    header.classList.remove('is-scrolled');
+    return;
+  }
+
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
