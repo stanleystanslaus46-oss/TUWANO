@@ -2077,130 +2077,132 @@ svg.lucide {
 }
 
 
-/* Premium customer testimony — Curated Highlights */
-.tuwano-testimonial {
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.34fr);
-  gap: clamp(2rem, 6vw, 6rem);
-  align-items: center;
-  margin: clamp(3rem, 7vw, 6rem) auto 0;
-  padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 7vw, 6.5rem);
-  max-width: 1180px;
-  background: #10164a;
-  color: #fff;
-  isolation: isolate;
+
+/* Premium sliding customer testimonials */
+.tuwano-testimonials {
+  max-width: 980px;
+  margin: clamp(3rem, 7vw, 5.5rem) auto 0;
+  padding: 0 clamp(1.25rem, 4vw, 2rem);
+  text-align: center;
 }
-.tuwano-testimonial::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 85% 15%, rgba(255,255,255,.10), transparent 32%),
-              linear-gradient(135deg, rgba(255,255,255,.035), transparent 55%);
-  pointer-events: none;
+.tuwano-testimonials-heading .section-kicker {
+  color: #a7894e;
+  margin-bottom: .7rem;
 }
-.tuwano-testimonial-mark {
-  position: absolute;
-  top: -0.15em;
-  left: clamp(1rem, 3vw, 2.75rem);
-  font-family: var(--font-serif);
-  font-size: clamp(8rem, 15vw, 13rem);
-  font-weight: 400;
-  line-height: 1;
-  color: rgba(255,255,255,.08);
-  pointer-events: none;
-}
-.tuwano-testimonial-content {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-}
-.tuwano-testimonial .section-kicker {
-  color: #d6b979;
-  margin-bottom: 1.25rem;
-}
-.tuwano-testimonial blockquote {
+.tuwano-testimonials-heading h2 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.65rem, 3vw, 2.75rem);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: -.01em;
-  color: #fff;
+  line-height: 1.08;
+  color: #171717;
 }
-.tuwano-testimonial-meta {
+.tuwano-testimonial-stage {
+  position: relative;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding: 0 clamp(1rem, 7vw, 6rem);
+}
+.tuwano-testimonial-track {
+  position: relative;
+  min-height: clamp(190px, 23vw, 250px);
+}
+.tuwano-testimonial-slide {
+  position: absolute;
+  inset: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .55s ease, transform .55s ease;
 }
-.tuwano-testimonial-rule {
-  width: 42px;
-  height: 1px;
-  background: #d6b979;
+.tuwano-testimonial-slide.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.tuwano-testimonial-quote {
   display: block;
-  flex: 0 0 auto;
+  height: 30px;
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  line-height: .7;
+  color: #b79a5a;
 }
-.tuwano-testimonial-meta strong,
-.tuwano-testimonial-meta span {
+.tuwano-testimonial-slide blockquote {
+  max-width: 760px;
+  margin: .25rem auto 1.35rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: #292929;
+}
+.tuwano-testimonial-client strong,
+.tuwano-testimonial-client span {
   display: block;
 }
-.tuwano-testimonial-meta strong {
+.tuwano-testimonial-client strong {
+  font-family: var(--font-sans);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #171717;
+}
+.tuwano-testimonial-client span {
+  margin-top: .3rem;
   font-family: var(--font-sans);
   font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .16em;
-  text-transform: uppercase;
+  color: #8a8a8a;
 }
-.tuwano-testimonial-meta div span {
-  margin-top: .25rem;
-  font-family: var(--font-sans);
-  font-size: .75rem;
-  color: rgba(255,255,255,.58);
-  letter-spacing: .04em;
+.tuwano-testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: .8rem;
 }
-.tuwano-testimonial-ornament {
-  position: relative;
-  z-index: 1;
-  justify-self: center;
-  width: clamp(150px, 20vw, 220px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(214,185,121,.55);
-  transform: rotate(45deg);
-  display: grid;
-  place-items: center;
+.tuwano-testimonial-arrow {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(23,23,23,.2);
+  border-radius: 50%;
+  background: transparent;
+  color: #171717;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
 }
-.tuwano-testimonial-ornament::before,
-.tuwano-testimonial-ornament::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(214,185,121,.22);
-  inset: 14%;
+.tuwano-testimonial-arrow:hover {
+  border-color: #171717;
+  background: #171717;
+  color: #fff;
 }
-.tuwano-testimonial-ornament::after { inset: 28%; }
-.tuwano-testimonial-ornament span {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #d6b979;
-  transform: rotate(-45deg);
+.tuwano-testimonial-dots {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
-.tuwano-testimonial-ornament span:nth-child(1) { top: 18%; left: 18%; }
-.tuwano-testimonial-ornament span:nth-child(2) { top: 50%; left: 50%; width: 7px; height: 7px; }
-.tuwano-testimonial-ornament span:nth-child(3) { right: 18%; bottom: 18%; }
-
-@media (max-width: 760px) {
-  .tuwano-testimonial {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 3rem;
-    padding: 3rem 1.5rem;
-  }
-  .tuwano-testimonial blockquote { font-size: clamp(1.55rem, 7vw, 2.1rem); }
-  .tuwano-testimonial-ornament {
-    width: 125px;
-    justify-self: start;
-    margin-left: .75rem;
-  }
+.tuwano-testimonial-dots button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c9c9c9;
+  cursor: pointer;
+  transition: transform .25s ease, background .25s ease;
+}
+.tuwano-testimonial-dots button.is-active {
+  background: #a7894e;
+  transform: scale(1.55);
+}
+@media (max-width: 600px) {
+  .tuwano-testimonials { padding: 0 1rem; }
+  .tuwano-testimonial-stage { padding: 0; }
+  .tuwano-testimonial-track { min-height: 255px; }
+  .tuwano-testimonial-slide blockquote { font-size: 1.35rem; line-height: 1.45; }
+  .tuwano-testimonial-controls { margin-top: .4rem; }
 }
