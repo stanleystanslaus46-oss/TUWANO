@@ -1577,3 +1577,16 @@ svg.lucide {
   0%{transform:scale(1.11)}
   100%{transform:scale(1)}
 }
+
+
+/* Final color correction: keep the Shinao-inspired strip labels and video statement white. */
+.shinao-marquee-section,
+.shinao-marquee-item,
+.shinao-marquee-item strong,
+.shinao-marquee-item .muted {
+  color: #fff !important;
+}
+.shinao-video-copy,
+.shinao-video-copy h2 {
+  color: #fff !important;
+}
