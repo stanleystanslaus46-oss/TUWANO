@@ -1598,3 +1598,15 @@ svg.lucide {
 .shinao-editorial-banner .shinao-editorial-copy {
   color: #1f1d1a !important;
 }
+
+
+/* Restore the moving strip to its original default text colors. */
+.shinao-marquee-section,
+.shinao-marquee-item { color: #111 !important; }
+.shinao-marquee-item strong { color: #000 !important; }
+.shinao-marquee-item .muted { color: rgba(0,0,0,.2) !important; }
+
+/* The Earrings and Necklaces labels above the editorial images should be white. */
+.shinao-feature-banner .shinao-banner-kicker,
+.shinao-feature-banner .shinao-banner-copy h2,
+.shinao-feature-banner .shinao-banner-copy p { color: #fff !important; }
