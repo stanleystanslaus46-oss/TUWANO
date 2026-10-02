@@ -81,7 +81,7 @@
             <a href="/shop.html" class="header-nav-link">Shop</a>
             <a href="/gold.html" class="header-nav-link">Gold</a>
             <a href="/silver.html" class="header-nav-link">Silver</a>
-            <a href="/piercing.html" class="header-nav-link">Ear Piercing</a>
+            <a href="/piercing.html" class="header-nav-link"><i data-lucide="sparkles" aria-hidden="true"></i><span>Ear Piercing</span></a>
             <a href="/about.html" class="header-nav-link">About</a>
             <a href="/stores.html" class="header-nav-link">Stores</a>
             <a href="/contact.html" class="header-nav-link">Contact</a>
@@ -117,17 +117,17 @@
       </div>
       <div class="drawer-body">
         <nav style="display: flex; flex-direction: column; gap: 1.25rem;">
-          <a href="/shop.html" class="header-nav-link" style="font-size: 1.125rem;">Shop All Jewellery</a>
-          <a href="/gold.html" class="header-nav-link" style="font-size: 1.125rem;">Gold Jewellery</a>
-          <a href="/silver.html" class="header-nav-link" style="font-size: 1.125rem;">Silver Jewellery</a>
-          <a href="/rings.html" class="header-nav-link" style="font-size: 1.125rem;">Rings</a>
-          <a href="/necklaces.html" class="header-nav-link" style="font-size: 1.125rem;">Necklaces & Chains</a>
-          <a href="/bracelets.html" class="header-nav-link" style="font-size: 1.125rem;">Bracelets</a>
-          <a href="/earrings.html" class="header-nav-link" style="font-size: 1.125rem;">Earrings</a>
+          <a href="/shop.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="grid-2x2" aria-hidden="true"></i><span>Shop All Jewellery</span></a>
+          <a href="/gold.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="coins" aria-hidden="true"></i><span>Gold Jewellery</span></a>
+          <a href="/silver.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="gem" aria-hidden="true"></i><span>Silver Jewellery</span></a>
+          <a href="/rings.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="circle-dot" aria-hidden="true"></i><span>Rings</span></a>
+          <a href="/necklaces.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="link" aria-hidden="true"></i><span>Necklaces & Chains</span></a>
+          <a href="/bracelets.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="watch" aria-hidden="true"></i><span>Bracelets</span></a>
+          <a href="/earrings.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="gem" aria-hidden="true"></i><span>Earrings</span></a>
           <a href="/piercing.html" class="header-nav-link" style="font-size: 1.125rem;">Ear Piercing</a>
-          <a href="/about.html" class="header-nav-link" style="font-size: 1.125rem;">About Tuwano</a>
-          <a href="/stores.html" class="header-nav-link" style="font-size: 1.125rem;">Boutique Locations</a>
-          <a href="/contact.html" class="header-nav-link" style="font-size: 1.125rem;">Contact & Enquiries</a>
+          <a href="/about.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="info" aria-hidden="true"></i><span>About Tuwano</span></a>
+          <a href="/stores.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="map-pin" aria-hidden="true"></i><span>Boutique Locations</span></a>
+          <a href="/contact.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="phone" aria-hidden="true"></i><span>Contact & Enquiries</span></a>
         </nav>
 
         <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
@@ -149,29 +149,47 @@
     <!-- Main Content -->
     <main id="main-content">
       <!-- 1. Editorial Hero -->
-      <section class="hero-section">
-        <div class="container" style="max-width: 1440px;">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
-              <h1 class="hero-headline">
-                JEWELLERY<br />THAT ENDURES.
-              </h1>
-              <p class="hero-subcopy">
-                Discover selected gold and silver pieces designed to become part of your story, alongside ear piercing services.
-              </p>
-              <div class="hero-actions">
-                <a href="/shop.html" class="btn btn-primary">Explore Collection</a>
-                <a href="/stores.html" class="btn btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.25);">Visit Our Stores</a>
-              </div>
-            </div>
-            <div class="hero-media">
-              <img src="/assets/images/editorial/hero_jewellery.jpg" alt="Tuwano Jewelleries High Jewellery Campaign" fetchpriority="high" decoding="async" width="1920" height="1280" />
-              <div class="hero-media-scrim"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="hero-section aro-style-hero" aria-label="Tuwano jewellery collections">
+  <div class="hero-slider" data-hero-slider>
+    <article class="hero-slide is-active" data-slide>
+      <div class="hero-slide-media"><img src="/assets/images/collections/collection_gold.jpg" alt="Tuwano classic gold jewellery collection" fetchpriority="high" decoding="async" /></div>
+      <div class="hero-media-scrim"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
+        <h1 class="hero-headline">Classic Jewellery<br />Collection</h1>
+        <p class="hero-subcopy">If you like the idea of the highest quality diamonds available for a price as stunning as the sparkle, meet your new best friend.</p>
+        <div class="hero-actions"><a href="shop.html" class="btn btn-primary">Shop Now</a></div>
+      </div>
+    </article>
+    <article class="hero-slide" data-slide>
+      <div class="hero-slide-media"><img src="/assets/images/editorial/hero_jewellery.jpg" alt="Tuwano pink sunset jewellery collection" loading="lazy" decoding="async" /></div>
+      <div class="hero-media-scrim"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
+        <h1 class="hero-headline">The Pink Sunset<br />Collection</h1>
+        <p class="hero-subcopy">If you like the idea of the highest quality diamonds available for a price as stunning as the sparkle, meet your new best friend.</p>
+        <div class="hero-actions"><a href="shop.html" class="btn btn-primary">Shop Now</a></div>
+      </div>
+    </article>
+    <article class="hero-slide" data-slide>
+      <div class="hero-slide-media"><img src="/assets/images/collections/collection_silver.jpg" alt="Tuwano stylish silver jewellery collection" loading="lazy" decoding="async" /></div>
+      <div class="hero-media-scrim"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
+        <h1 class="hero-headline">Stylish Jewellery<br />Collection</h1>
+        <p class="hero-subcopy">If you like the idea of the highest quality diamonds available for a price as stunning as the sparkle, meet your new best friend.</p>
+        <div class="hero-actions"><a href="shop.html" class="btn btn-primary">Shop Now</a></div>
+      </div>
+    </article>
+    <button class="hero-slider-arrow hero-slider-prev" type="button" aria-label="Previous hero slide"><i data-lucide="arrow-left"></i></button>
+    <button class="hero-slider-arrow hero-slider-next" type="button" aria-label="Next hero slide"><i data-lucide="arrow-right"></i></button>
+    <div class="hero-slider-dots" aria-label="Hero slides">
+      <button type="button" class="is-active" data-slide-dot="0" aria-label="Slide 1"></button>
+      <button type="button" data-slide-dot="1" aria-label="Slide 2"></button>
+      <button type="button" data-slide-dot="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
 
       <!-- 2. Brand Statement -->
       <section class="site-section brand-statement-section">
