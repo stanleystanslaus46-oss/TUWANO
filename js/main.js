@@ -154,6 +154,38 @@ function initShinaoProductInteractions() {
   refreshLucideIcons();
 }
 
+
+function initTuwanoTestimonials() {
+  const slider = document.querySelector('[data-testimonials]');
+  if (!slider || slider.dataset.ready === 'true') return;
+  const slides = [...slider.querySelectorAll('[data-testimonial-slide]')];
+  const dots = [...slider.querySelectorAll('[data-testimonial-dot]')];
+  if (slides.length < 2) return;
+  slider.dataset.ready = 'true';
+  let index = 0;
+  let timer;
+
+  const show = (next) => {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+  };
+  const restart = () => {
+    window.clearInterval(timer);
+    timer = window.setInterval(() => show(index + 1), 6500);
+  };
+
+  slider.querySelector('[data-testimonial-prev]')?.addEventListener('click', () => { show(index - 1); restart(); });
+  slider.querySelector('[data-testimonial-next]')?.addEventListener('click', () => { show(index + 1); restart(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); restart(); }));
+
+  slider.addEventListener('mouseenter', () => window.clearInterval(timer));
+  slider.addEventListener('mouseleave', restart);
+  slider.addEventListener('touchstart', () => window.clearInterval(timer), { passive: true });
+  slider.addEventListener('touchend', restart, { passive: true });
+  restart();
+}
+
 function initApp() {
   refreshLucideIcons();
   window.setTimeout(renderFallbackLucideIcons, 900);
@@ -168,6 +200,7 @@ function initApp() {
   initGlobalQuickView();
   initGlobalWishlist();
   initScrollAnimations();
+  initTuwanoTestimonials();
 }
 
 if (document.readyState === 'loading') {
