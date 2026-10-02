@@ -2073,5 +2073,5 @@ svg.lucide {
 }
 .site-header.hero-overlay-header .shinao-header-brand .header-logo-img,
 .site-header.hero-overlay-header.is-scrolled .shinao-header-brand .header-logo-img {
-  filter: none !important;
+  filter: brightness(0) invert(1) !important;
 }
