@@ -19,10 +19,24 @@ const TUWANO_ICON_SVGS = {
   'arrow-left': '<path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>'
 };
 
+
+const TUWANO_ICON_SVGS_EXTRA = {
+  coins: '<circle cx="9" cy="9" r="5"></circle><circle cx="15" cy="15" r="5"></circle><path d="M9 6v6M6 9h6"></path>',
+  gem: '<path d="m6 3 12 0 3 5-9 13L3 8 6 3Z"></path><path d="m3 8 18 0"></path><path d="m9 3 3 5 3-5"></path>',
+  'circle-dot': '<circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2"></circle>',
+  link: '<path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path>',
+  watch: '<rect x="7" y="6" width="10" height="12" rx="3"></rect><path d="M9 2h6v4H9zM9 18h6v4H9z"></path>',
+  sparkles: '<path d="m12 3 1.2 5.8L19 10l-5.8 1.2L12 17l-1.2-5.8L5 10l5.8-1.2L12 3Z"></path><path d="m19 16 .6 2.4L22 19l-2.4.6L19 22l-.6-2.4L16 19l2.4-.6L19 16Z"></path>',
+  info: '<circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path>',
+  'map-pin': '<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle>',
+  phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"></path>',
+  'arrow-right': '<path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>'
+};
+
 function renderFallbackLucideIcons() {
   document.querySelectorAll('[data-lucide]').forEach((node) => {
     const name = node.getAttribute('data-lucide');
-    const paths = TUWANO_ICON_SVGS[name];
+    const paths = TUWANO_ICON_SVGS[name] || TUWANO_ICON_SVGS_EXTRA[name];
     if (!paths || node.tagName.toLowerCase() === 'svg') return;
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -92,6 +106,7 @@ export function refreshLucideIcons() {
 function initApp() {
   refreshLucideIcons();
   window.setTimeout(renderFallbackLucideIcons, 900);
+  initAroStyleHeroSlider();
   initStickyHeader();
   initMobileNav();
   initLuxuryChrome();
@@ -504,4 +519,33 @@ function initLuxuryChrome() {
   const active=path.endsWith('shop.html')||path.endsWith('gold.html')||path.endsWith('silver.html')||path.endsWith('rings.html')||path.endsWith('necklaces.html')||path.endsWith('bracelets.html')||path.endsWith('earrings.html')||path.endsWith('product.html')?'shop':'home';
   nav.querySelector(`[data-mobile-nav="${active}"]`)?.classList.add('is-active');
   refreshLucideIcons();
+}
+
+function initAroStyleHeroSlider() {
+  const slider = document.querySelector('[data-hero-slider]');
+  if (!slider || slider.dataset.ready === 'true') return;
+  slider.dataset.ready = 'true';
+  const slides = [...slider.querySelectorAll('[data-slide]')];
+  const dots = [...slider.querySelectorAll('[data-slide-dot]')];
+  if (slides.length < 2) return;
+  let index = 0;
+  let timer;
+
+  const show = (next) => {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+  };
+  const restart = () => {
+    window.clearInterval(timer);
+    timer = window.setInterval(() => show(index + 1), 5500);
+  };
+  slider.querySelector('.hero-slider-prev')?.addEventListener('click', () => { show(index - 1); restart(); });
+  slider.querySelector('.hero-slider-next')?.addEventListener('click', () => { show(index + 1); restart(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); restart(); }));
+  slider.addEventListener('mouseenter', () => window.clearInterval(timer));
+  slider.addEventListener('mouseleave', restart);
+  slider.addEventListener('touchstart', () => window.clearInterval(timer), { passive: true });
+  slider.addEventListener('touchend', restart, { passive: true });
+  restart();
 }
