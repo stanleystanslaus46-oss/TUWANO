@@ -1230,3 +1230,350 @@ svg.lucide {
 .drawer-body nav>a{display:flex!important;align-items:center;gap:.8rem}.drawer-body nav>a>svg{flex:0 0 20px;width:20px;height:20px;stroke-width:1.5;color:#171716}.drawer-body nav>a>span{display:inline-block}
 @media(max-width:820px){.hero-slider{height:72svh;min-height:560px;max-height:700px}.aro-style-hero .hero-content{width:100%;padding:5.5rem 1.5rem 5rem;justify-content:flex-end}.aro-style-hero .hero-headline{font-size:clamp(3.1rem,14vw,5.1rem)}.hero-slider-arrow{width:38px;height:38px;top:55%}.hero-slider-prev{left:14px}.hero-slider-next{right:14px}.hero-slider-dots{bottom:20px}.drawer-body nav{gap:1rem!important}.drawer-body nav>a{font-size:1rem!important}}
 @media(max-width:520px){.hero-slider{height:70svh;min-height:520px}.aro-style-hero .hero-content{padding:4.5rem 1.25rem 4.25rem}.aro-style-hero .hero-kicker{font-size:.57rem}.aro-style-hero .hero-subcopy{font-size:.82rem;line-height:1.65}.hero-slider-arrow{display:none}}
+
+
+/* Shinao reference sections — typography, spacing, motion and product interactions */
+.shinao-marquee-section{
+  width:100%;
+  overflow:hidden;
+  background:#fff;
+  border-top:1px solid #e5e5e5;
+  border-bottom:1px solid #e5e5e5;
+  font-family:"Outfit",sans-serif;
+}
+.shinao-marquee{
+  width:100%;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:32px 0;
+}
+.shinao-marquee-track{
+  display:flex;
+  width:max-content;
+  animation:shinaoMarquee 30s linear infinite;
+}
+.shinao-marquee:hover .shinao-marquee-track{animation-play-state:paused}
+.shinao-marquee-item{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding-right:40px;
+  font-size:clamp(1.25rem,2.5vw,2.25rem);
+  line-height:1.2;
+  letter-spacing:-.02em;
+}
+.shinao-marquee-item .muted{color:rgba(0,0,0,.2)}
+.shinao-marquee-item strong{font-weight:400;color:#000}
+@keyframes shinaoMarquee{to{transform:translateX(-50%)}}
+
+.shinao-feature-banners{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0;
+  width:100%;
+  font-family:"Outfit",sans-serif;
+}
+.shinao-feature-banner{
+  position:relative;
+  display:grid;
+  min-height:60vh;
+  height:60vh;
+  overflow:hidden;
+  color:#fff;
+  background:#111;
+}
+.shinao-feature-banner > *{grid-area:1/1}
+.shinao-feature-banner-media{position:relative;overflow:hidden}
+.shinao-feature-banner-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 1s cubic-bezier(.2,.7,.2,1);
+}
+.shinao-feature-banner:hover .shinao-feature-banner-media img{transform:scale(1.045)}
+.shinao-feature-banner-overlay{
+  position:relative;
+  z-index:1;
+  background:linear-gradient(180deg,rgba(0,0,0,.03) 35%,rgba(0,0,0,.56) 100%);
+}
+.shinao-feature-banner-content{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:flex-start;
+  padding:2rem;
+}
+.shinao-banner-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
+.shinao-banner-kicker{
+  font-family:"Jost","Outfit",sans-serif;
+  font-size:12px;
+  line-height:1.2;
+  font-weight:500;
+  letter-spacing:0;
+  text-transform:none;
+}
+.shinao-banner-copy h2{
+  margin:0;
+  font-family:"Outfit",sans-serif;
+  font-size:clamp(2.5rem,4vw,3.5rem);
+  font-weight:400;
+  letter-spacing:-.04rem;
+  line-height:1.08;
+}
+.shinao-banner-copy p{
+  max-width:380px;
+  margin:0;
+  font-family:"Outfit",sans-serif;
+  font-size:14px;
+  line-height:1.55;
+  opacity:.9;
+}
+.shinao-banner-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  margin-top:1.25rem;
+  padding:.65rem 1.1rem;
+  background:#fff;
+  color:#111;
+  font-family:"Outfit",sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.02em;
+  text-decoration:none;
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.shinao-banner-button:hover{background:#111;color:#fff;transform:translateY(-2px)}
+
+.shinao-video-statement{
+  position:relative;
+  min-height:80vh;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#111;
+  font-family:"Outfit",sans-serif;
+}
+.shinao-video-statement video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.shinao-video-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.2);
+}
+.shinao-video-copy{
+  position:relative;
+  z-index:1;
+  width:min(890px,calc(100% - 80px));
+  text-align:center;
+  color:#fff;
+}
+.shinao-video-copy h2{
+  margin:0;
+  font-family:"Outfit",sans-serif;
+  font-size:clamp(2.6rem,5vw,4rem);
+  line-height:1.3;
+  font-weight:500;
+  letter-spacing:-.04em;
+}
+
+.shinao-products-section{
+  width:100%;
+  max-width:1720px;
+  margin:0 auto;
+  padding:96px 40px 110px;
+  font-family:"Outfit",sans-serif;
+}
+.shinao-products-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:48px;
+}
+.shinao-products-header h2{
+  margin:0;
+  font-family:"Outfit",sans-serif;
+  font-size:clamp(2rem,3.2vw,3rem);
+  font-weight:500;
+  letter-spacing:-.02em;
+  line-height:1.15;
+}
+.shinao-product-tabs{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.shinao-product-tabs button{
+  border:0;
+  background:transparent;
+  color:#111;
+  padding:10px 18px;
+  font:500 13px/1.2 "Outfit",sans-serif;
+  cursor:pointer;
+  border-bottom:1px solid transparent;
+}
+.shinao-product-tabs button.is-active{border-bottom-color:#111}
+.shinao-products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:24px;
+}
+.shinao-product-card{
+  --product-secondary-image-duration:.3s;
+  --product-action-size:32px;
+  --product-action-icon-size:19px;
+  --product-category-size:12px;
+  --product-category-color:#737373;
+  --product-name-size:14px;
+  --product-price-size:16px;
+  position:relative;
+  min-width:0;
+}
+.shinao-product-card.is-hidden{display:none}
+.shinao-product-thumbnail{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:16px;
+  background:#f4f4f2;
+}
+.shinao-product-media{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  aspect-ratio:1/1;
+  background:#f4f4f2;
+}
+.shinao-product-media > img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.shinao-product-media .secondary-media{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  transition:opacity var(--product-secondary-image-duration) ease-in-out;
+}
+.shinao-product-card:hover .secondary-media,
+.shinao-product-card.is-secondary-visible .secondary-media{opacity:1}
+.shinao-sale-badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  min-height:25px;
+  padding:4px 8px;
+  background:#111;
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+  line-height:1;
+}
+.shinao-product-actions{
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.shinao-product-actions button{
+  width:var(--product-action-size);
+  height:var(--product-action-size);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #e5e5e5;
+  border-radius:50%;
+  background:#fff;
+  color:#111;
+  cursor:pointer;
+  opacity:0;
+  transform:translateX(10px);
+  transition:opacity .25s ease,transform .25s ease,background .2s ease,color .2s ease;
+}
+.shinao-product-actions button:nth-child(2){transition-delay:.07s}
+.shinao-product-actions button:nth-child(3){transition-delay:.12s}
+.shinao-product-actions button svg{width:var(--product-action-icon-size);height:var(--product-action-icon-size);stroke-width:1.5}
+.shinao-product-card:hover .shinao-product-actions button,
+.shinao-product-card:focus-within .shinao-product-actions button{
+  opacity:1;
+  transform:translateX(0);
+}
+.shinao-product-actions button:hover{background:#111;color:#fff;border-color:#111}
+.shinao-product-body{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.shinao-product-category{
+  font-size:var(--product-category-size);
+  font-weight:700;
+  text-transform:uppercase;
+  color:var(--product-category-color);
+  letter-spacing:.02em;
+}
+.shinao-product-body h3{
+  margin:0;
+  font-family:"Outfit",sans-serif;
+  font-size:var(--product-name-size);
+  font-weight:500;
+  letter-spacing:-.01em;
+  line-height:1.35;
+}
+.shinao-product-body h3 a{color:#111;text-decoration:none}
+.shinao-product-body h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+.shinao-product-price{display:flex;align-items:flex-end;gap:10px;margin-top:1px}
+.shinao-product-price del{color:#737373;font-size:14px}
+.shinao-product-price ins{color:#111;font-size:16px;font-weight:600;text-decoration:none;letter-spacing:-.02em}
+
+@media (min-width:1024px){
+  .shinao-feature-banner{min-height:60vh;height:80vh}
+}
+@media (max-width:1024px){
+  .shinao-products-section{padding:72px 24px 90px}
+  .shinao-products-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+  .shinao-products-header{align-items:flex-start;flex-direction:column}
+  .shinao-video-copy{width:min(100% - 32px,760px)}
+  .shinao-video-copy h2{font-size:42px}
+}
+@media (max-width:700px){
+  .shinao-marquee{padding:26px 0}
+  .shinao-marquee-item{gap:28px;padding-right:28px;font-size:20px}
+  .shinao-feature-banners{grid-template-columns:1fr}
+  .shinao-feature-banner{height:60vh;min-height:560px}
+  .shinao-feature-banner-content{padding:20px}
+  .shinao-banner-copy h2{font-size:32px}
+  .shinao-banner-copy p{font-size:13px}
+  .shinao-video-statement{min-height:60vh}
+  .shinao-video-copy{width:calc(100% - 32px)}
+  .shinao-video-copy h2{font-size:32px}
+  .shinao-products-section{padding:64px 16px 80px}
+  .shinao-products-grid{gap:28px 12px}
+  .shinao-product-tabs{width:100%;overflow:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .shinao-product-tabs button{white-space:nowrap;padding-inline:14px}
+  .shinao-product-actions button{opacity:1;transform:none}
+}
+
+/* Stronger zoom on each hero transition: every newly active image starts close and settles into place. */
+.hero-slide .hero-slide-media img{transform:scale(1.11);transition:none}
+.hero-slide.is-active .hero-slide-media img{animation:tuwanoHeroZoom 5.5s cubic-bezier(.2,.65,.2,1) both}
+@keyframes tuwanoHeroZoom{
+  0%{transform:scale(1.11)}
+  100%{transform:scale(1)}
+}
