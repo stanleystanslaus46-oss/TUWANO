@@ -42,7 +42,7 @@
       "@context": "https://schema.org",
       "@type": "JewelryStore",
       "name": "Tuwano Jewelleries",
-      "image": "/assets/images/logo/tuwano-logo.svg",
+      "image": "assets/images/logo/tuwano-logo.svg",
       "description": "Jewellery retailer offering gold and sterling silver jewellery, rings, necklaces, bracelets, earrings, and ear piercing services.",
       "telephone": "+255679323647",
       "department": [
@@ -61,6 +61,30 @@
       ]
     }
     </script>
+  
+<style>
+/* Homepage header: visually transparent, no colored header surface or control boxes. */
+.site-header.hero-overlay-header,
+.site-header.hero-overlay-header.is-scrolled,
+.site-header.hero-overlay-header .container,
+.site-header.hero-overlay-header .header-inner {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.site-header.hero-overlay-header .mobile-menu-trigger,
+.site-header.hero-overlay-header .header-action-btn {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.site-header.hero-overlay-header .shinao-header-brand .header-logo-img {
+  filter: brightness(0) invert(1) !important;
+}
+</style>
+
   </head>
   <body>
     <!-- Top Bar Header -->
@@ -76,7 +100,7 @@
           </div>
 
           <a href="/" class="header-brand shinao-header-brand" aria-label="Tuwano Jewelleries Home">
-            <img src="/assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" class="header-logo-img" />
+            <img src="assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" class="header-logo-img" />
           </a>
 
           <div class="header-actions shinao-header-cart">
@@ -97,7 +121,7 @@
     <div class="side-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
       <div class="drawer-header">
         <div class="header-brand">
-          <img src="/assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" style="height: 38px;" />
+          <img src="assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" style="height: 38px;" />
           <span class="header-brand-title" style="font-size: 1.15rem;">TUWANO</span>
         </div>
         <button type="button" class="drawer-close-btn" id="mobile-menu-close" aria-label="Close navigation menu"><i data-lucide="x"></i></button>
@@ -198,36 +222,19 @@
         </div>
       </section>
 
-      <!-- Shinao-style editorial banners -->
-      <section class="shinao-feature-banners" aria-label="Featured jewellery collections">
-        <article class="shinao-feature-banner">
-          <div class="shinao-feature-banner-media">
-            <img src="assets/shinao/banner-1.webp" alt="Earrings collection" loading="lazy" decoding="async" />
+      <!-- 2. Brand Statement -->
+      <section class="site-section brand-statement-section">
+        <div class="container">
+          <div class="statement-box reveal-on-scroll">
+            <span class="section-kicker">Fine Jewellery Philosophy</span>
+            <h2 class="statement-headline">
+              CRAFTED FOR THE MOMENTS THAT MATTER.
+            </h2>
+            <p class="statement-copy">
+              At Tuwano Jewelleries, every piece is curated with strict attention to weight, purity, and tactile comfort. Whether marking an enduring milestone or elevating daily personal style, our gold and silver collections honor life's most meaningful occasions.
+            </p>
           </div>
-          <div class="shinao-feature-banner-overlay"></div>
-          <div class="shinao-feature-banner-content">
-            <div class="shinao-banner-copy">
-              <span class="shinao-banner-kicker">This Week Popular</span>
-              <h2>Earrings</h2>
-              <p>Delicate earrings designed to add soft shine and graceful charm.</p>
-            </div>
-            <a href="earrings.html" class="shinao-banner-button">START SHOPPING</a>
-          </div>
-        </article>
-        <article class="shinao-feature-banner">
-          <div class="shinao-feature-banner-media">
-            <img src="assets/shinao/banner-2.webp" alt="Necklaces collection" loading="lazy" decoding="async" />
-          </div>
-          <div class="shinao-feature-banner-overlay"></div>
-          <div class="shinao-feature-banner-content">
-            <div class="shinao-banner-copy">
-              <span class="shinao-banner-kicker">New Season Favorite</span>
-              <h2>Necklaces</h2>
-              <p>Timeless necklaces made to complete every look with quiet beauty.</p>
-            </div>
-            <a href="necklaces.html" class="shinao-banner-button">START SHOPPING</a>
-          </div>
-        </article>
+        </div>
       </section>
 
       <!-- Shinao-style New Season Favorites -->
@@ -326,19 +333,36 @@
         </div>
       </section>
 
-      <!-- 2. Brand Statement -->
-      <section class="site-section brand-statement-section">
-        <div class="container">
-          <div class="statement-box reveal-on-scroll">
-            <span class="section-kicker">Fine Jewellery Philosophy</span>
-            <h2 class="statement-headline">
-              CRAFTED FOR THE MOMENTS THAT MATTER.
-            </h2>
-            <p class="statement-copy">
-              At Tuwano Jewelleries, every piece is curated with strict attention to weight, purity, and tactile comfort. Whether marking an enduring milestone or elevating daily personal style, our gold and silver collections honor life's most meaningful occasions.
-            </p>
+      <!-- Shinao-style editorial banners -->
+      <section class="shinao-feature-banners" aria-label="Featured jewellery collections">
+        <article class="shinao-feature-banner">
+          <div class="shinao-feature-banner-media">
+            <img src="assets/shinao/banner-1.webp" alt="Earrings collection" loading="lazy" decoding="async" />
           </div>
-        </div>
+          <div class="shinao-feature-banner-overlay"></div>
+          <div class="shinao-feature-banner-content">
+            <div class="shinao-banner-copy">
+              <span class="shinao-banner-kicker">This Week Popular</span>
+              <h2>Earrings</h2>
+              <p>Delicate earrings designed to add soft shine and graceful charm.</p>
+            </div>
+            <a href="earrings.html" class="shinao-banner-button">START SHOPPING</a>
+          </div>
+        </article>
+        <article class="shinao-feature-banner">
+          <div class="shinao-feature-banner-media">
+            <img src="assets/shinao/banner-2.webp" alt="Necklaces collection" loading="lazy" decoding="async" />
+          </div>
+          <div class="shinao-feature-banner-overlay"></div>
+          <div class="shinao-feature-banner-content">
+            <div class="shinao-banner-copy">
+              <span class="shinao-banner-kicker">New Season Favorite</span>
+              <h2>Necklaces</h2>
+              <p>Timeless necklaces made to complete every look with quiet beauty.</p>
+            </div>
+            <a href="necklaces.html" class="shinao-banner-button">START SHOPPING</a>
+          </div>
+        </article>
       </section>
 
       <!-- Shinao-style video statement -->
@@ -800,7 +824,7 @@
           <!-- Col 1: Brand Info -->
           <div class="footer-brand-lockup">
             <a href="/" aria-label="Tuwano Jewelleries Home">
-              <img src="/assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" class="footer-logo-img" />
+              <img src="assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" class="footer-logo-img" />
             </a>
             <p class="footer-brand-desc">
               Gold and sterling silver jewellery and ear piercing services in Tanzania.
