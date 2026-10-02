@@ -2075,3 +2075,132 @@ svg.lucide {
 .site-header.hero-overlay-header.is-scrolled .shinao-header-brand .header-logo-img {
   filter: none !important;
 }
+
+
+/* Premium customer testimony — Curated Highlights */
+.tuwano-testimonial {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.34fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+  margin: clamp(3rem, 7vw, 6rem) auto 0;
+  padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 7vw, 6.5rem);
+  max-width: 1180px;
+  background: #10164a;
+  color: #fff;
+  isolation: isolate;
+}
+.tuwano-testimonial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(255,255,255,.10), transparent 32%),
+              linear-gradient(135deg, rgba(255,255,255,.035), transparent 55%);
+  pointer-events: none;
+}
+.tuwano-testimonial-mark {
+  position: absolute;
+  top: -0.15em;
+  left: clamp(1rem, 3vw, 2.75rem);
+  font-family: var(--font-serif);
+  font-size: clamp(8rem, 15vw, 13rem);
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255,255,255,.08);
+  pointer-events: none;
+}
+.tuwano-testimonial-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+.tuwano-testimonial .section-kicker {
+  color: #d6b979;
+  margin-bottom: 1.25rem;
+}
+.tuwano-testimonial blockquote {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 3vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+  color: #fff;
+}
+.tuwano-testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.tuwano-testimonial-rule {
+  width: 42px;
+  height: 1px;
+  background: #d6b979;
+  display: block;
+  flex: 0 0 auto;
+}
+.tuwano-testimonial-meta strong,
+.tuwano-testimonial-meta span {
+  display: block;
+}
+.tuwano-testimonial-meta strong {
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.tuwano-testimonial-meta div span {
+  margin-top: .25rem;
+  font-family: var(--font-sans);
+  font-size: .75rem;
+  color: rgba(255,255,255,.58);
+  letter-spacing: .04em;
+}
+.tuwano-testimonial-ornament {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  width: clamp(150px, 20vw, 220px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(214,185,121,.55);
+  transform: rotate(45deg);
+  display: grid;
+  place-items: center;
+}
+.tuwano-testimonial-ornament::before,
+.tuwano-testimonial-ornament::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(214,185,121,.22);
+  inset: 14%;
+}
+.tuwano-testimonial-ornament::after { inset: 28%; }
+.tuwano-testimonial-ornament span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #d6b979;
+  transform: rotate(-45deg);
+}
+.tuwano-testimonial-ornament span:nth-child(1) { top: 18%; left: 18%; }
+.tuwano-testimonial-ornament span:nth-child(2) { top: 50%; left: 50%; width: 7px; height: 7px; }
+.tuwano-testimonial-ornament span:nth-child(3) { right: 18%; bottom: 18%; }
+
+@media (max-width: 760px) {
+  .tuwano-testimonial {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding: 3rem 1.5rem;
+  }
+  .tuwano-testimonial blockquote { font-size: clamp(1.55rem, 7vw, 2.1rem); }
+  .tuwano-testimonial-ornament {
+    width: 125px;
+    justify-self: start;
+    margin-left: .75rem;
+  }
+}
