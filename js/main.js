@@ -21,6 +21,8 @@ const TUWANO_ICON_SVGS = {
 
 
 const TUWANO_ICON_SVGS_EXTRA = {
+  eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>',
+  repeat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/>',
   coins: '<circle cx="9" cy="9" r="5"></circle><circle cx="15" cy="15" r="5"></circle><path d="M9 6v6M6 9h6"></path>',
   gem: '<path d="m6 3 12 0 3 5-9 13L3 8 6 3Z"></path><path d="m3 8 18 0"></path><path d="m9 3 3 5 3-5"></path>',
   'circle-dot': '<circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2"></circle>',
@@ -103,10 +105,60 @@ export function refreshLucideIcons() {
   window.setTimeout(renderFallbackLucideIcons, 700);
 }
 
+function initShinaoProductInteractions() {
+  const section = document.querySelector('.shinao-products-section');
+  if (!section) return;
+
+  const tabs = [...section.querySelectorAll('[data-shinao-filter]')];
+  const cards = [...section.querySelectorAll('.shinao-product-card')];
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = tab.dataset.shinaoFilter || 'all';
+      tabs.forEach(item => {
+        const active = item === tab;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      cards.forEach(card => {
+        const show = filter === 'all' || card.dataset.shinaoCategory === filter;
+        card.classList.toggle('is-hidden', !show);
+      });
+    });
+  });
+
+  // On touch devices, the first tap reveals the lifestyle image; the next tap follows the product link.
+  section.querySelectorAll('.shinao-product-media').forEach(link => {
+    link.addEventListener('click', event => {
+      if (!window.matchMedia('(hover: none)').matches) return;
+      const card = link.closest('.shinao-product-card');
+      if (!card) return;
+      if (!card.classList.contains('is-secondary-visible')) {
+        event.preventDefault();
+        section.querySelectorAll('.shinao-product-card.is-secondary-visible').forEach(other => {
+          if (other !== card) other.classList.remove('is-secondary-visible');
+        });
+        card.classList.add('is-secondary-visible');
+      }
+    });
+  });
+
+  // Keep the product-action controls visually consistent with the reference.
+  section.querySelectorAll('[data-shinao-action]').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      button.classList.toggle('is-active');
+    });
+  });
+
+  refreshLucideIcons();
+}
+
 function initApp() {
   refreshLucideIcons();
   window.setTimeout(renderFallbackLucideIcons, 900);
   initAroStyleHeroSlider();
+  initShinaoProductInteractions();
   initStickyHeader();
   initMobileNav();
   initLuxuryChrome();
