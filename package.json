@@ -6,7 +6,7 @@
   "description": "Tuwano Jewelleries luxury multi-page website",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "node scripts/fetch-reference-assets.mjs && vite build",
     "preview": "vite preview",
     "lint": "node scripts/validate.mjs"
   },
