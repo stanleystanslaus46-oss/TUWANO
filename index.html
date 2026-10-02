@@ -68,38 +68,25 @@
       <div class="container">
         <div class="header-inner">
           <!-- Zone 1: Brand Wordmark -->
-          <a href="/" class="header-brand" aria-label="Tuwano Jewelleries Home">
+          <!-- Shinao-style overlay header: menu left, centered TUWANO logo, cart right. -->
+          <div class="shinao-header-menu">
+            <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open navigation menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+
+          <a href="/" class="header-brand shinao-header-brand" aria-label="Tuwano Jewelleries Home">
             <img src="/assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" class="header-logo-img" />
-            <div class="header-brand-text">
-              <span class="header-brand-title">TUWANO</span>
-              <span class="header-brand-sub">Jewellers</span>
-            </div>
           </a>
 
-          <!-- Zone 2: Navigation Links -->
-          <nav class="header-nav" aria-label="Main Navigation">
-            <a href="/shop.html" class="header-nav-link">Shop</a>
-            <a href="/gold.html" class="header-nav-link">Gold</a>
-            <a href="/silver.html" class="header-nav-link">Silver</a>
-            <a href="/piercing.html" class="header-nav-link"><i data-lucide="sparkles" aria-hidden="true"></i><span>Ear Piercing</span></a>
-            <a href="/about.html" class="header-nav-link">About</a>
-            <a href="/stores.html" class="header-nav-link">Stores</a>
-            <a href="/contact.html" class="header-nav-link">Contact</a>
-          </nav>
-
-          <!-- Zone 3: Actions -->
-          <div class="header-actions">
-            <!-- Search Button -->
-            <button type="button" class="header-action-btn open-search-btn" aria-label="Search catalogue"><i data-lucide="search"></i></button>
-
-            <!-- Wishlist Button -->
-            <button type="button" class="header-action-btn open-wishlist-btn" aria-label="View saved items"><i data-lucide="heart"></i><span class="badge-count wishlist-count-badge">0</span></button>
-
-            <!-- Cart Button -->
-            <button type="button" class="header-action-btn open-cart-btn" aria-label="View selection bag"><i data-lucide="shopping-bag"></i><span class="badge-count cart-count-badge">0</span></button>
-
-            <!-- Mobile Hamburger -->
-            <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open navigation menu"><i data-lucide="menu"></i></button>
+          <div class="header-actions shinao-header-cart">
+            <button type="button" class="header-action-btn open-cart-btn" aria-label="View selection bag">
+              <svg class="shinao-cart-icon" viewBox="0 0 28 28" aria-hidden="true">
+                <path d="M7.5 10V8.2a6.5 6.5 0 0 1 13 0V10" />
+                <path d="M4.5 10h19l-1.5 13H6L4.5 10Z" />
+              </svg>
+              <span class="badge-count cart-count-badge">0</span>
+            </button>
           </div>
         </div>
       </div>
