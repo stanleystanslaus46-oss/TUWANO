@@ -1590,3 +1590,11 @@ svg.lucide {
 .shinao-video-copy h2 {
   color: #fff !important;
 }
+
+
+/* Editorial banner labels: restore the dark text used below the moving strip. */
+.shinao-editorial-banner .shinao-editorial-kicker,
+.shinao-editorial-banner .shinao-editorial-title,
+.shinao-editorial-banner .shinao-editorial-copy {
+  color: #1f1d1a !important;
+}
