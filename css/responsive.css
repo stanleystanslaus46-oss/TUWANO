@@ -2218,3 +2218,54 @@ svg.lucide {
   border-top: 1px solid rgba(23,23,23,.08);
   border-bottom: 1px solid rgba(23,23,23,.08);
 }
+
+/* Final mobile logo correction */
+.site-header.hero-overlay-header .header-inner {
+  grid-template-columns: 1fr auto 1fr !important;
+}
+.site-header.hero-overlay-header .shinao-header-brand {
+  min-width: 0;
+  width: auto;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.site-header.hero-overlay-header .shinao-header-brand .header-logo-img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 142px !important;
+  height: auto !important;
+  max-width: 142px !important;
+  min-width: 0 !important;
+  object-fit: contain !important;
+  filter: none !important;
+}
+@media (max-width: 820px) {
+  .site-header.hero-overlay-header .header-inner {
+    height: 82px !important;
+  }
+  .site-header.hero-overlay-header .shinao-header-brand .header-logo-img {
+    width: 118px !important;
+    height: auto !important;
+    max-height: 72px !important;
+  }
+  .site-header.hero-overlay-header .mobile-menu-trigger,
+  .site-header.hero-overlay-header .header-action-btn {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+@media (max-width: 520px) {
+  .site-header.hero-overlay-header .header-inner {
+    height: 76px !important;
+  }
+  .site-header.hero-overlay-header .shinao-header-brand .header-logo-img {
+    width: 108px !important;
+    max-height: 66px !important;
+  }
+  .site-header.hero-overlay-header .mobile-menu-trigger,
+  .site-header.hero-overlay-header .header-action-btn {
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
