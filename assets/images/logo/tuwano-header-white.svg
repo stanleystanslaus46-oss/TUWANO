@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-labelledby="title desc">
+  <title id="title">TUWANO Jewellers</title>
+  <desc id="desc">TUWANO Jewellers white diamond monogram wordmark</desc>
+  <g transform="translate(18 24)">
+    <path fill="none" stroke="#fff" stroke-width="7" d="M86 8h118l48 42-107 132L38 50Z"/>
+    <path fill="#fff" d="M86 8h118l48 42H38Zm-39 58h196L143 177Zm48 0 48 13 48-13-48 88Z"/>
+    <path fill="#171716" d="M123 66h40v13h-13v58c0 23-10 38-28 45-15 6-30 3-39-7-7-7-8-15-3-21 5-6 12-6 18 1 4 5 9 7 15 4 7-3 10-10 10-20V79h-10Z"/>
+    <path fill="#fff" d="M88 66h132l-15 13H103Z"/>
+  </g>
+  <text x="330" y="132" fill="#fff" font-family="Georgia,Times New Roman,serif" font-size="86" font-weight="700" letter-spacing="7">TUWANO</text>
+  <text x="510" y="186" fill="#fff" font-family="Georgia,Times New Roman,serif" font-size="31" font-style="italic" letter-spacing="3" text-anchor="middle">= Jewellers =</text>
+</svg>
