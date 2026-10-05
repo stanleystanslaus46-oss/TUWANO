@@ -1472,3 +1472,8 @@ svg.lucide {
 .shinao-video-copy { position:relative; z-index:1; min-height:inherit; display:flex; align-items:center; justify-content:center; padding:clamp(2rem,7vw,7rem); text-align:center; }
 .shinao-video-copy h2 { max-width:850px; margin:0; color:#fff; font-family:var(--font-display,Georgia,serif); font-weight:400; font-size:clamp(2rem,4.5vw,4.5rem); line-height:1.05; letter-spacing:-.025em; }
 @media (max-width:820px) { .shinao-video-statement { min-height:58vh; } .shinao-video-copy { padding:2rem 1.25rem; } .shinao-video-copy h2 { font-size:clamp(2rem,9vw,3.2rem); } }
+
+
+/* Desktop-only restoration of the second editorial banner. */
+.shinao-feature-banner-desktop-only { display:block; }
+@media (max-width:820px) { .shinao-feature-banner-desktop-only { display:none; } }
