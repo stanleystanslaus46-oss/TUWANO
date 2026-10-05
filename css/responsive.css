@@ -2348,3 +2348,46 @@ svg.lucide {
     height:76px !important;
   }
 }
+
+
+/* Distinct New Season Favorites section treatment */
+.shinao-products-section {
+  margin-top: clamp(2rem, 4vw, 4rem);
+  padding: clamp(4rem, 7vw, 6.5rem) clamp(1.25rem, 4vw, 4rem);
+  background: #eee8dd;
+  border-top: 1px solid rgba(23,23,22,.08);
+  border-bottom: 1px solid rgba(23,23,22,.08);
+}
+.shinao-products-header {
+  max-width: 1440px;
+  margin: 0 auto clamp(2.25rem, 4vw, 3.5rem);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(23,23,22,.14);
+}
+.shinao-products-heading-copy {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+.shinao-products-heading-copy .section-kicker {
+  display: block;
+  color: #94764a;
+  margin: 0;
+}
+.shinao-products-heading-copy h2 {
+  margin: 0;
+}
+.shinao-products-section .shinao-products-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (max-width: 820px) {
+  .shinao-products-section {
+    margin-top: 1.5rem;
+    padding: 3.5rem 1rem 4rem;
+  }
+  .shinao-products-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+  }
+}
