@@ -1,3 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuwano Jewelleries | Fine Gold & Silver Jewellery</title>
+    <meta name="description" content="Explore gold and silver jewellery, rings, necklaces, bracelets, earrings, and ear piercing services at Tuwano Jewelleries in Madukani and Mori." />
+    <link rel="canonical" href="/index.html" />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tuwano Jewelleries" />
+    <meta property="og:title" content="Tuwano Jewelleries | Fine Gold & Silver Jewellery" />
+    <meta property="og:description" content="Explore gold and silver jewellery, rings, necklaces, bracelets, earrings, and ear piercing services at Tuwano Jewelleries in Madukani and Mori." />
+    <meta property="og:image" content="/assets/images/editorial/hero_jewellery.jpg" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tuwano Jewelleries | Fine Gold & Silver Jewellery" />
+    <meta name="twitter:description" content="Explore gold and silver jewellery, rings, necklaces, bracelets, earrings, and ear piercing services at Tuwano Jewelleries in Madukani and Mori." />
+    <meta name="twitter:image" content="/assets/images/editorial/hero_jewellery.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo/tuwano-mark.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <!-- Lucide Icons -->
+    <script defer src="./js/vendor/lucide.min.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "Tuwano Jewelleries",
+      "image": "assets/images/logo/tuwano-logo.svg",
+      "description": "Jewellery retailer offering gold and sterling silver jewellery, rings, necklaces, bracelets, earrings, and ear piercing services.",
+      "telephone": "+255679323647",
+      "department": [
+        {
+          "@type": "JewelryStore",
+          "name": "Tuwano Jewelleries – Madukani",
+          "telephone": "+255679323647",
+          "openingHours": "Mo-Su 09:00-18:00"
+        },
+        {
+          "@type": "JewelryStore",
+          "name": "Tuwano Jewelleries – Mori",
+          "telephone": "+255652562875",
+          "openingHours": "Mo-Su 09:00-19:30"
+        }
+      ]
+    }
+    </script>
+  
+
+
+  </head>
+  <body>
+    <!-- Top Bar Header -->
+    <header class="site-header hero-overlay-header">
+      <div class="container">
+        <div class="header-inner">
+          <!-- Zone 1: Brand Wordmark -->
+          <!-- Shinao-style overlay header: menu left, centered TUWANO logo, cart right. -->
+          <div class="shinao-header-menu">
+            <button type="button" class="mobile-menu-trigger" id="mobile-menu-toggle" aria-label="Open navigation menu">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+
+          <a href="/" class="header-brand shinao-header-brand" aria-label="Tuwano Jewelleries Home">
+            <img src="/assets/images/logo/tuwano-official-traced.svg" alt="Tuwano Jewellers" class="header-logo-mark" />
+          </a>
+
+          <div class="header-actions shinao-header-cart">
+            <button type="button" class="header-action-btn open-cart-btn" aria-label="View selection bag">
+              <svg class="shinao-cart-icon" viewBox="0 0 28 28" aria-hidden="true">
+                <path d="M7.5 10V8.2a6.5 6.5 0 0 1 13 0V10" />
+                <path d="M4.5 10h19l-1.5 13H6L4.5 10Z" />
+              </svg>
+              <span class="badge-count cart-count-badge">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer-overlay" id="mobile-drawer-overlay"></div>
+    <div class="side-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+      <div class="drawer-header">
+        <div class="header-brand">
+          <img src="assets/images/logo/tuwano-uploaded.png" alt="Tuwano Jewellers" style="height: 38px;" />
+          <span class="header-brand-title" style="font-size: 1.15rem;">TUWANO</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="mobile-menu-close" aria-label="Close navigation menu"><i data-lucide="x"></i></button>
+      </div>
+      <div class="drawer-body">
+        <nav style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <a href="/shop.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="grid-2x2" aria-hidden="true"></i><span>Shop All Jewellery</span></a>
+          <a href="/gold.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="coins" aria-hidden="true"></i><span>Gold Jewellery</span></a>
+          <a href="/silver.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="gem" aria-hidden="true"></i><span>Silver Jewellery</span></a>
+          <a href="/rings.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="circle-dot" aria-hidden="true"></i><span>Rings</span></a>
+          <a href="/necklaces.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="link" aria-hidden="true"></i><span>Necklaces & Chains</span></a>
+          <a href="/bracelets.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="watch" aria-hidden="true"></i><span>Bracelets</span></a>
+          <a href="/earrings.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="gem" aria-hidden="true"></i><span>Earrings</span></a>
+          <a href="/piercing.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="sparkles" aria-hidden="true"></i><span>Ear Piercing</span></a>
+          <a href="/about.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="info" aria-hidden="true"></i><span>About Tuwano</span></a>
+          <a href="/stores.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="map-pin" aria-hidden="true"></i><span>Boutique Locations</span></a>
+          <a href="/contact.html" class="header-nav-link" style="font-size: 1.125rem;"><i data-lucide="phone" aria-hidden="true"></i><span>Contact & Enquiries</span></a>
+        </nav>
+
+        <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+          <span class="section-kicker">Stores & Hours</span>
+          <div style="margin-top: 0.75rem; font-size: 0.8125rem; color: var(--color-text-secondary); line-height: 1.6;">
+            <p><strong>Madukani:</strong> 09:00 AM – 06:00 PM<br/>Tel: <a href="tel:0679323647">0679 323 647</a></p>
+            <p style="margin-top: 0.5rem;"><strong>Mori:</strong> 09:00 AM – 07:30 PM<br/>Tel: <a href="tel:0652562875">0652 562 875</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="drawer-footer">
+        <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Jewelleries%2C%20I%20would%20like%20to%20enquire%20about%20your%20jewellery." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+          <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- 1. Editorial Hero -->
+      <section class="hero-section aro-style-hero" aria-label="Tuwano jewellery collections">
+  <div class="hero-slider" data-hero-slider>
+    <article class="hero-slide is-active" data-slide>
+      <div class="hero-slide-media"><img src="/assets/images/collections/collection_gold.jpg" alt="Tuwano classic gold jewellery collection" fetchpriority="high" decoding="async" /></div>
+      <div class="hero-media-scrim"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
+        <h1 class="hero-headline">Classic Jewellery<br />Collection</h1>
+        <p class="hero-subcopy">If you like the idea of the highest quality diamonds available for a price as stunning as the sparkle, meet your new best friend.</p>
+        <div class="hero-actions"><a href="shop.html" class="btn btn-primary">Shop Now</a></div>
+      </div>
+    </article>
+    <article class="hero-slide" data-slide>
+      <div class="hero-slide-media"><img src="/assets/images/editorial/hero_jewellery.jpg" alt="Tuwano pink sunset jewellery collection" loading="lazy" decoding="async" /></div>
+      <div class="hero-media-scrim"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
+        <h1 class="hero-headline">The Pink Sunset<br />Collection</h1>
+        <p class="hero-subcopy">If you like the idea of the highest quality diamonds available for a price as stunning as the sparkle, meet your new best friend.</p>
+        <div class="hero-actions"><a href="shop.html" class="btn btn-primary">Shop Now</a></div>
+      </div>
+    </article>
+    <article class="hero-slide" data-slide>
+      <div class="hero-slide-media"><img src="/assets/images/collections/collection_silver.jpg" alt="Tuwano stylish silver jewellery collection" loading="lazy" decoding="async" /></div>
+      <div class="hero-media-scrim"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">Tuwano Jewelleries · Madukani & Mori</span>
+        <h1 class="hero-headline">Stylish Jewellery<br />Collection</h1>
+        <p class="hero-subcopy">If you like the idea of the highest quality diamonds available for a price as stunning as the sparkle, meet your new best friend.</p>
+        <div class="hero-actions"><a href="shop.html" class="btn btn-primary">Shop Now</a></div>
+      </div>
+    </article>
+    <button class="hero-slider-arrow hero-slider-prev" type="button" aria-label="Previous hero slide"><i data-lucide="arrow-left"></i></button>
+    <button class="hero-slider-arrow hero-slider-next" type="button" aria-label="Next hero slide"><i data-lucide="arrow-right"></i></button>
+    <div class="hero-slider-dots" aria-label="Hero slides">
+      <button type="button" class="is-active" data-slide-dot="0" aria-label="Slide 1"></button>
+      <button type="button" data-slide-dot="1" aria-label="Slide 2"></button>
+      <button type="button" data-slide-dot="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+      <!-- Shinao-style moving category strip -->
+      <section class="shinao-marquee-section" aria-label="Jewellery categories">
+        <div class="shinao-marquee">
+          <div class="shinao-marquee-track">
+            <div class="shinao-marquee-item">
+              <span class="muted">Wherever you go</span><strong>Neclaces</strong>
+              <span class="muted">Yours for every journey</span><strong>Bracelets</strong>
+              <span class="muted">A part of your story</span><strong>Rings</strong>
+              <span class="muted">Carrying elegance forward</span><strong>Earrings</strong>
+            </div>
+            <div class="shinao-marquee-item" aria-hidden="true">
+              <span class="muted">Wherever you go</span><strong>Neclaces</strong>
+              <span class="muted">Yours for every journey</span><strong>Bracelets</strong>
+              <span class="muted">A part of your story</span><strong>Rings</strong>
+              <span class="muted">Carrying elegance forward</span><strong>Earrings</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Brand Statement -->
+      <section class="site-section brand-statement-section">
+        <div class="container">
+          <div class="statement-box reveal-on-scroll">
+            <span class="section-kicker">Fine Jewellery Philosophy</span>
+            <h2 class="statement-headline">
+              CRAFTED FOR THE MOMENTS THAT MATTER.
+            </h2>
+            <p class="statement-copy">
+              At Tuwano Jewelleries, every piece is curated with strict attention to weight, purity, and tactile comfort. Whether marking an enduring milestone or elevating daily personal style, our gold and silver collections honor life's most meaningful occasions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+>
+
+      <!-- Shinao-style editorial banners -->
+      <section class="shinao-feature-banners" aria-label="Featured jewellery collections">
+        <article class="shinao-feature-banner">
+          <div class="shinao-feature-banner-media">
+            <img src="assets/shinao/banner-2.webp" alt="Necklaces collection" loading="lazy" decoding="async" />
+          </div>
+          <div class="shinao-feature-banner-overlay"></div>
+          <div class="shinao-feature-banner-content">
+            <div class="shinao-banner-copy">
+              <span class="shinao-banner-kicker">New Season Favorite</span>
+              <h2>Necklaces</h2>
+              <p>Timeless necklaces made to complete every look with quiet beauty.</p>
+            </div>
+            <a href="necklaces.html" class="shinao-banner-button">START SHOPPING</a>
+          </div>
+        </article>
+              <article class="shinao-feature-banner shinao-feature-banner-desktop-only">
+          <div class="shinao-feature-banner-media">
+            <img src="assets/shinao/banner-1.webp" alt="Earrings collection" loading="lazy" decoding="async" />
+          </div>
+          <div class="shinao-feature-banner-overlay"></div>
+          <div class="shinao-feature-banner-content">
+            <div class="shinao-banner-copy">
+              <span class="shinao-banner-kicker">This Week Popular</span>
+              <h2>Earrings</h2>
+              <p>Delicate earrings designed to add soft shine and graceful charm.</p>
+            </div>
+            <a href="earrings.html" class="shinao-banner-button">START SHOPPING</a>
+          </div>
+        </article>
+</section>
+
+
+
+      <!-- Shinao-style New Season Favorites -->
+      <section class="shinao-products-section" aria-labelledby="new-season-favorites-title">
+        <div class="shinao-products-header">
+          <div class="shinao-products-heading-copy">
+            <span class="section-kicker">Seasonal Edit</span>
+            <h2 id="new-season-favorites-title">New Season Favorites</h2>
+          </div>
+          <div class="shinao-product-tabs" role="tablist" aria-label="Product categories">
+            <button type="button" class="is-active" data-shinao-filter="all" role="tab" aria-selected="true">All</button>
+            <button type="button" data-shinao-filter="bracelets" role="tab" aria-selected="false">Bracelets</button>
+            <button type="button" data-shinao-filter="earrings" role="tab" aria-selected="false">Earrings</button>
+            <button type="button" data-shinao-filter="necklaces" role="tab" aria-selected="false">Necklaces</button>
+            <button type="button" data-shinao-filter="rings" role="tab" aria-selected="false">Rings</button>
+          </div>
+        </div>
+
+        <div class="shinao-products-grid">
+          <article class="shinao-product-card" data-shinao-category="rings">
+            <div class="shinao-product-thumbnail">
+              <span class="shinao-sale-badge">20%</span>
+              <div class="shinao-product-actions">
+                <button type="button" aria-label="Save Wishbone Ring" data-shinao-action="wishlist"><i data-lucide="heart"></i></button>
+                <button type="button" aria-label="Quick view Wishbone Ring" data-shinao-action="quickview"><i data-lucide="eye"></i></button>
+                <button type="button" aria-label="Compare Wishbone Ring" data-shinao-action="compare"><i data-lucide="repeat"></i></button>
+              </div>
+              <a href="product.html?id=wishbone-ring" class="shinao-product-media">
+                <img src="assets/shinao/wishbone-ring-1.webp" alt="Wishbone Ring" loading="lazy" decoding="async" />
+                <span class="secondary-media" style="background-image:url('assets/shinao/wishbone-ring-2.webp');"></span>
+              </a>
+            </div>
+            <div class="shinao-product-body">
+              <span class="shinao-product-category">Rings</span>
+              <h3><a href="product.html?id=wishbone-ring">Wishbone Ring</a></h3>
+              <div class="shinao-product-price"><del>$199.00</del><ins>$159.00</ins></div>
+            </div>
+          </article>
+
+          <article class="shinao-product-card" data-shinao-category="necklaces">
+            <div class="shinao-product-thumbnail">
+              <span class="shinao-sale-badge">16%</span>
+              <div class="shinao-product-actions">
+                <button type="button" aria-label="Save Vermeil Linked Necklace" data-shinao-action="wishlist"><i data-lucide="heart"></i></button>
+                <button type="button" aria-label="Quick view Vermeil Linked Necklace" data-shinao-action="quickview"><i data-lucide="eye"></i></button>
+                <button type="button" aria-label="Compare Vermeil Linked Necklace" data-shinao-action="compare"><i data-lucide="repeat"></i></button>
+              </div>
               <a href="product.html?id=vermeil-linked-necklace" class="shinao-product-media">
                 <img src="assets/shinao/vermeil-linked-necklace-1.webp" alt="Vermeil Linked Necklace" loading="lazy" decoding="async" />
                 <span class="secondary-media" style="background-image:url('assets/shinao/vermeil-linked-necklace-2.webp');"></span>
@@ -49,6 +348,7 @@
               <div class="shinao-product-price"><del>$298.00</del><ins>$265.00</ins></div>
             </div>
           </article>
+
           <article class="shinao-product-card" data-shinao-category="necklaces">
             <div class="shinao-product-thumbnail">
               <div class="shinao-product-actions">
@@ -56,15 +356,9 @@
                 <button type="button" aria-label="Quick view Classic Solid Gold Cuban Link Chain" data-shinao-action="quickview"><i data-lucide="eye"></i></button>
                 <button type="button" aria-label="Compare Classic Solid Gold Cuban Link Chain" data-shinao-action="compare"><i data-lucide="repeat"></i></button>
               </div>
-              <a href="product.html?id=tj-gold-001" class="shinao-product-media">
-                <img src="assets/images/products/gold_cuban_chain.jpg" alt="Classic Solid Gold Cuban Link Chain" loading="lazy" decoding="async" />
-              </a>
+              <a href="product.html?id=tj-gold-001" class="shinao-product-media"><img src="assets/images/products/gold_cuban_chain.jpg" alt="Classic Solid Gold Cuban Link Chain" loading="lazy" decoding="async" /></a>
             </div>
-            <div class="shinao-product-body">
-              <span class="shinao-product-category">Necklaces</span>
-              <h3><a href="product.html?id=tj-gold-001">Classic Solid Gold Cuban Link Chain</a></h3>
-              <div class="shinao-product-price"><ins>Price on request</ins></div>
-            </div>
+            <div class="shinao-product-body"><span class="shinao-product-category">Necklaces</span><h3><a href="product.html?id=tj-gold-001">Classic Solid Gold Cuban Link Chain</a></h3><div class="shinao-product-price"><ins>Price on request</ins></div></div>
           </article>
 
           <article class="shinao-product-card" data-shinao-category="rings">
@@ -74,15 +368,9 @@
                 <button type="button" aria-label="Quick view Handcrafted Gold Solitaire Diamond Ring" data-shinao-action="quickview"><i data-lucide="eye"></i></button>
                 <button type="button" aria-label="Compare Handcrafted Gold Solitaire Diamond Ring" data-shinao-action="compare"><i data-lucide="repeat"></i></button>
               </div>
-              <a href="product.html?id=tj-gold-002" class="shinao-product-media">
-                <img src="assets/images/products/diamond_gold_ring.jpg" alt="Handcrafted Gold Solitaire Diamond Ring" loading="lazy" decoding="async" />
-              </a>
+              <a href="product.html?id=tj-gold-002" class="shinao-product-media"><img src="assets/images/products/diamond_gold_ring.jpg" alt="Handcrafted Gold Solitaire Diamond Ring" loading="lazy" decoding="async" /></a>
             </div>
-            <div class="shinao-product-body">
-              <span class="shinao-product-category">Rings</span>
-              <h3><a href="product.html?id=tj-gold-002">Handcrafted Gold Solitaire Diamond Ring</a></h3>
-              <div class="shinao-product-price"><ins>Price on request</ins></div>
-            </div>
+            <div class="shinao-product-body"><span class="shinao-product-category">Rings</span><h3><a href="product.html?id=tj-gold-002">Handcrafted Gold Solitaire Diamond Ring</a></h3><div class="shinao-product-price"><ins>Price on request</ins></div></div>
           </article>
 
           <article class="shinao-product-card" data-shinao-category="earrings">
@@ -92,15 +380,9 @@
                 <button type="button" aria-label="Quick view Architectural Twisted Gold Huggie Hoops" data-shinao-action="quickview"><i data-lucide="eye"></i></button>
                 <button type="button" aria-label="Compare Architectural Twisted Gold Huggie Hoops" data-shinao-action="compare"><i data-lucide="repeat"></i></button>
               </div>
-              <a href="product.html?id=tj-gold-003" class="shinao-product-media">
-                <img src="assets/images/products/gold_hoop_earrings.jpg" alt="Architectural Twisted Gold Huggie Hoops" loading="lazy" decoding="async" />
-              </a>
+              <a href="product.html?id=tj-gold-003" class="shinao-product-media"><img src="assets/images/products/gold_hoop_earrings.jpg" alt="Architectural Twisted Gold Huggie Hoops" loading="lazy" decoding="async" /></a>
             </div>
-            <div class="shinao-product-body">
-              <span class="shinao-product-category">Earrings</span>
-              <h3><a href="product.html?id=tj-gold-003">Architectural Twisted Gold Huggie Hoops</a></h3>
-              <div class="shinao-product-price"><ins>Price on request</ins></div>
-            </div>
+            <div class="shinao-product-body"><span class="shinao-product-category">Earrings</span><h3><a href="product.html?id=tj-gold-003">Architectural Twisted Gold Huggie Hoops</a></h3><div class="shinao-product-price"><ins>Price on request</ins></div></div>
           </article>
 
           <article class="shinao-product-card" data-shinao-category="bracelets">
@@ -110,15 +392,9 @@
                 <button type="button" aria-label="Quick view Sculptural Sterling Silver Cuff Bangle" data-shinao-action="quickview"><i data-lucide="eye"></i></button>
                 <button type="button" aria-label="Compare Sculptural Sterling Silver Cuff Bangle" data-shinao-action="compare"><i data-lucide="repeat"></i></button>
               </div>
-              <a href="product.html?id=tj-silver-001" class="shinao-product-media">
-                <img src="assets/images/products/silver_cuff_bangle.jpg" alt="Sculptural Sterling Silver Cuff Bangle" loading="lazy" decoding="async" />
-              </a>
+              <a href="product.html?id=tj-silver-001" class="shinao-product-media"><img src="assets/images/products/silver_cuff_bangle.jpg" alt="Sculptural Sterling Silver Cuff Bangle" loading="lazy" decoding="async" /></a>
             </div>
-            <div class="shinao-product-body">
-              <span class="shinao-product-category">Bracelets</span>
-              <h3><a href="product.html?id=tj-silver-001">Sculptural Sterling Silver Cuff Bangle</a></h3>
-              <div class="shinao-product-price"><ins>Price on request</ins></div>
-            </div>
+            <div class="shinao-product-body"><span class="shinao-product-category">Bracelets</span><h3><a href="product.html?id=tj-silver-001">Sculptural Sterling Silver Cuff Bangle</a></h3><div class="shinao-product-price"><ins>Price on request</ins></div></div>
           </article>
         </div>
       </section>
@@ -150,3 +426,662 @@
             <a href="/silver.html" class="collection-card col-card-silver reveal-on-scroll">
               <img src="/assets/images/collections/collection_silver.jpg" alt="Silver Jewellery Collection" class="collection-card-img" loading="lazy" />
               <div class="collection-card-scrim"></div>
+              <div class="collection-card-content">
+                <span class="collection-card-kicker">925 Sterling</span>
+                <h3 class="collection-card-title">Silver Jewellery</h3>
+                <span class="collection-card-link-text">Explore Silver →</span>
+              </div>
+            </a>
+
+            <!-- Rings -->
+            <a href="/rings.html" class="collection-card col-card-rings reveal-on-scroll">
+              <img src="/assets/images/products/diamond_gold_ring.jpg" alt="Rings Collection" class="collection-card-img" loading="lazy" />
+              <div class="collection-card-scrim"></div>
+              <div class="collection-card-content">
+                <span class="collection-card-kicker">Solitaire & Bands</span>
+                <h3 class="collection-card-title">Rings</h3>
+                <span class="collection-card-link-text">Discover Rings →</span>
+              </div>
+            </a>
+
+            <!-- Necklaces & Chains -->
+            <a href="/necklaces.html" class="collection-card col-card-necklaces reveal-on-scroll">
+              <img src="/assets/images/products/gold_cuban_chain.jpg" alt="Chains and Necklaces Collection" class="collection-card-img" loading="lazy" />
+              <div class="collection-card-scrim"></div>
+              <div class="collection-card-content">
+                <span class="collection-card-kicker">Cuban, Curb & Lariat</span>
+                <h3 class="collection-card-title">Chains & Necklaces</h3>
+                <span class="collection-card-link-text">View Chains →</span>
+              </div>
+            </a>
+
+            <!-- Bracelets -->
+            <a href="/bracelets.html" class="collection-card col-card-bracelets reveal-on-scroll">
+              <img src="/assets/images/products/silver_cuff_bangle.jpg" alt="Bracelets & Bangles Collection" class="collection-card-img" loading="lazy" />
+              <div class="collection-card-scrim"></div>
+              <div class="collection-card-content">
+                <span class="collection-card-kicker">Cuffs & Weaves</span>
+                <h3 class="collection-card-title">Bracelets</h3>
+                <span class="collection-card-link-text">View Bracelets →</span>
+              </div>
+            </a>
+
+            <!-- Earrings -->
+            <a href="/earrings.html" class="collection-card col-card-earrings reveal-on-scroll">
+              <img src="/assets/images/products/gold_hoop_earrings.jpg" alt="Earrings Collection" class="collection-card-img" loading="lazy" />
+              <div class="collection-card-scrim"></div>
+              <div class="collection-card-content">
+                <span class="collection-card-kicker">Huggies, Hoops & Studs</span>
+                <h3 class="collection-card-title">Earrings</h3>
+                <span class="collection-card-link-text">Explore Earrings →</span>
+              </div>
+            </a>
+
+            <!-- Piercing Studio -->
+            <a href="/piercing.html" class="collection-card col-card-piercing reveal-on-scroll">
+              <img src="/assets/images/piercing/piercing_curated_ear.jpg" alt="Ear Piercing Studio" class="collection-card-img" loading="lazy" />
+              <div class="collection-card-scrim"></div>
+              <div class="collection-card-content">
+                <span class="collection-card-kicker">Professional In-Store Studio</span>
+                <h3 class="collection-card-title">Ear Piercing</h3>
+                <span class="collection-card-link-text">Learn More & Enquire →</span>
+              </div>
+            </a>
+          </div>
+
+      <!-- Existing jewellery film statement -->
+      <section class="shinao-video-statement" aria-label="Tuwano jewellery film">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/shinao/video-cover-1.webp">
+          <source src="assets/shinao/shinao-jewelry-film.mp4" type="video/mp4" />
+        </video>
+        <div class="shinao-video-overlay"></div>
+        <div class="shinao-video-copy">
+          <h2>Jewelry shaped by quiet beauty, crafted to illuminate every gesture with timeless elegance.</h2>
+        </div>
+      </section>
+
+        </div>
+      </section>
+
+      <!-- 4. Featured Jewellery Showcase -->
+      <section class="site-section" style="background-color: var(--color-bg-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+          <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;" class="reveal-on-scroll">
+            <span class="section-kicker">Signature Selections</span>
+            <h2 class="section-title">Featured Pieces</h2>
+            <p class="section-subtitle" style="margin: 0.75rem auto 0;">
+              Selected gold and sterling silver designs available at our Madukani and Mori boutiques.
+            </p>
+          </div>
+
+          <div class="product-grid" id="homepage-featured-grid">
+            <!-- Dynamically populated or rendered static fallback -->
+            <article class="product-card" data-id="tj-gold-001">
+              <div class="product-card-media">
+                <a href="/product.html?id=tj-gold-001" class="product-card-link" aria-label="Classic Solid Gold Cuban Link Chain">
+                  <img src="/assets/images/products/gold_cuban_chain.jpg" alt="Classic Solid Gold Cuban Link Chain" class="product-card-img primary" loading="lazy" />
+                </a>
+                <button type="button" class="wishlist-btn" data-id="tj-gold-001" aria-label="Add to Wishlist">
+                  <i data-lucide="heart"></i>
+                </button>
+                <button type="button" class="quick-view-btn" data-id="tj-gold-001">Quick View</button>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-meta">
+                  <span class="product-card-category">Gold · Chains</span>
+                  <span class="product-card-tag">Signature</span>
+                </div>
+                <h3 class="product-card-title"><a href="/product.html?id=tj-gold-001">Classic Solid Gold Cuban Link Chain</a></h3>
+                <div class="product-card-footer">
+                  <span class="product-card-price">Price on request</span>
+                  <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Jewelleries%2C%20I%20am%20interested%20in%20the%20Classic%20Solid%20Gold%20Cuban%20Link%20Chain%20(Ref%3A%20tj-gold-001)." target="_blank" rel="noopener noreferrer" class="product-card-wa-link">
+                    <span class="wa-text">Enquire</span>
+                    <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="tj-gold-002">
+              <div class="product-card-media">
+                <a href="/product.html?id=tj-gold-002" class="product-card-link" aria-label="gold and silver Gold Solitaire Diamond Ring">
+                  <img src="/assets/images/products/diamond_gold_ring.jpg" alt="Gold Solitaire Diamond Ring" class="product-card-img primary" loading="lazy" />
+                </a>
+                <button type="button" class="wishlist-btn" data-id="tj-gold-002" aria-label="Add to Wishlist">
+                  <i data-lucide="heart"></i>
+                </button>
+                <button type="button" class="quick-view-btn" data-id="tj-gold-002">Quick View</button>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-meta">
+                  <span class="product-card-category">Gold · Rings</span>
+                  <span class="product-card-tag">Signature</span>
+                </div>
+                <h3 class="product-card-title"><a href="/product.html?id=tj-gold-002">gold and silver Gold Solitaire Diamond Ring</a></h3>
+                <div class="product-card-footer">
+                  <span class="product-card-price">Price on request</span>
+                  <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Jewelleries%2C%20I%20am%20interested%20in%20the%20gold and silver%20Gold%20Solitaire%20Diamond%20Ring." target="_blank" rel="noopener noreferrer" class="product-card-wa-link">
+                    <span class="wa-text">Enquire</span>
+                    <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="tj-gold-003">
+              <div class="product-card-media">
+                <a href="/product.html?id=tj-gold-003" class="product-card-link" aria-label="Architectural Twisted Gold Huggie Hoops">
+                  <img src="/assets/images/products/gold_hoop_earrings.jpg" alt="Architectural Twisted Gold Huggie Hoops" class="product-card-img primary" loading="lazy" />
+                </a>
+                <button type="button" class="wishlist-btn" data-id="tj-gold-003" aria-label="Add to Wishlist">
+                  <i data-lucide="heart"></i>
+                </button>
+                <button type="button" class="quick-view-btn" data-id="tj-gold-003">Quick View</button>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-meta">
+                  <span class="product-card-category">Gold · Earrings</span>
+                  <span class="product-card-tag">Bestseller</span>
+                </div>
+                <h3 class="product-card-title"><a href="/product.html?id=tj-gold-003">Architectural Twisted Gold Huggie Hoops</a></h3>
+                <div class="product-card-footer">
+                  <span class="product-card-price">Price on request</span>
+                  <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Jewelleries%2C%20I%20am%20interested%20in%20the%20Architectural%20Twisted%20Gold%20Huggie%20Hoops." target="_blank" rel="noopener noreferrer" class="product-card-wa-link">
+                    <span class="wa-text">Enquire</span>
+                    <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="tj-silver-001">
+              <div class="product-card-media">
+                <a href="/product.html?id=tj-silver-001" class="product-card-link" aria-label="Sculptural Sterling Silver Cuff Bangle">
+                  <img src="/assets/images/products/silver_cuff_bangle.jpg" alt="Sculptural Sterling Silver Cuff Bangle" class="product-card-img primary" loading="lazy" />
+                </a>
+                <button type="button" class="wishlist-btn" data-id="tj-silver-001" aria-label="Add to Wishlist">
+                  <i data-lucide="heart"></i>
+                </button>
+                <button type="button" class="quick-view-btn" data-id="tj-silver-001">Quick View</button>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-meta">
+                  <span class="product-card-category">Silver · Bracelets</span>
+                  <span class="product-card-tag">Contemporary</span>
+                </div>
+                <h3 class="product-card-title"><a href="/product.html?id=tj-silver-001">Sculptural Sterling Silver Cuff Bangle</a></h3>
+                <div class="product-card-footer">
+                  <span class="product-card-price">Price on request</span>
+                  <a href="https://wa.me/255652562875?text=Hello%20Tuwano%20Jewelleries%2C%20I%20am%20interested%20in%20the%20Sculptural%20Sterling%20Silver%20Cuff%20Bangle." target="_blank" rel="noopener noreferrer" class="product-card-wa-link">
+                    <span class="wa-text">Enquire</span>
+                    <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;">
+            <a href="/shop.html" class="btn btn-secondary">Browse All Catalogue Pieces</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Editorial Gold / Silver Split Showcase -->
+      <section class="editorial-split-section">
+        <!-- Gold Panel -->
+        <div class="editorial-split-panel gold reveal-on-scroll">
+          <img src="/assets/images/collections/collection_gold.jpg" alt="Fine Gold Jewellery" class="editorial-panel-img" loading="lazy" />
+          <span class="section-kicker">Material Purity</span>
+          <h2 class="editorial-panel-title">Gold Jewellery</h2>
+          <p class="editorial-panel-desc">
+            Rich, warm, and enduring. Explore gold jewellery across chains, rings, earrings, bracelets, and other designs.
+          </p>
+          <div>
+            <a href="/gold.html" class="btn btn-primary">Discover Gold Collection</a>
+          </div>
+        </div>
+
+        <!-- Silver Panel -->
+        <div class="editorial-split-panel silver reveal-on-scroll">
+          <img src="/assets/images/collections/collection_silver.jpg" alt="Sterling Silver Jewellery" class="editorial-panel-img" loading="lazy" />
+          <span class="section-kicker">Modern Architectural Form</span>
+          <h2 class="editorial-panel-title">Sculptural Sterling Silver</h2>
+          <p class="editorial-panel-desc">
+            Cool, confident, and clean. Our silver range pairs sculptural geometry with clean, contemporary forms.
+          </p>
+          <div>
+            <a href="/silver.html" class="btn btn-secondary" style="border-color: var(--color-stone);">Discover Silver Collection</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Ear Piercing Section -->
+      <section class="site-section piercing-highlight-section">
+        <div class="container">
+          <div class="piercing-grid">
+            <div class="piercing-media reveal-on-scroll">
+              <img src="/assets/images/piercing/piercing_curated_ear.jpg" alt="Curated Ear Piercing Studio" loading="lazy" />
+            </div>
+
+            <div class="piercing-info reveal-on-scroll">
+              <span class="section-kicker" style="color: #dfcaa7;">In-Store Service</span>
+              <h2 class="section-title" style="color: #fff; margin-bottom: 1rem;">
+                PROFESSIONAL EAR PIERCING.
+              </h2>
+              <p style="color: #cfd2db; font-size: 1.0625rem; line-height: 1.65;">
+                Experience ear piercing services at Madukani and Mori. Contact the relevant store to confirm service availability and jewellery options.
+              </p>
+
+              <div class="piercing-pill-row">
+                <div class="piercing-feature">
+                  <strong>Single-Use Sterile</strong>
+                  <span>Hygienic precision equipment</span>
+                </div>
+                <div class="piercing-feature">
+                  <strong>Curated Styling</strong>
+                  <span>Placement guidance for your selected piercing</span>
+                </div>
+                <div class="piercing-feature">
+                  <strong>Dedicated Aftercare</strong>
+                  <span>Comprehensive healing guidance</span>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <a href="/piercing.html" class="btn btn-gold">Ear Piercing Guide</a>
+                <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Jewelleries%2C%20I%20would%20like%20to%20book%20an%20Ear%20Piercing%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.25);">
+                  Book on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Tuwano Story / Atelier Section -->
+      <section class="site-section story-section">
+        <div class="container">
+          <div class="story-grid">
+            <div class="story-content reveal-on-scroll">
+              <span class="section-kicker">The Tuwano Philosophy</span>
+              <h2 class="section-title">Rooted in Care, Defined by Distinction.</h2>
+              <p>
+                Tuwano Jewelleries was established to offer jewellery collections and in-person services in Tanzania.
+              </p>
+              <p>
+                Every ring, chain, bracelet, and earring in our showcases is chosen for its structural excellence and honest material purity. We believe fine jewellery is deeply personal—a celebration of personal milestones, cherished connections, and self-expression.
+              </p>
+
+              <ul class="story-values-list">
+                <li class="story-value-item">
+                  <i data-lucide="check"></i>
+                  <span>Gold and sterling silver jewellery collections</span>
+                </li>
+                <li class="story-value-item">
+                  <i data-lucide="check"></i>
+                  <span>Warm, attentive client care across both physical boutique locations</span>
+                </li>
+                <li class="story-value-item">
+                  <i data-lucide="check"></i>
+                  <span>Direct WhatsApp enquiries for product and store information</span>
+                </li>
+              </ul>
+
+              <a href="/about.html" class="btn btn-secondary" style="margin-top: 0.5rem;">Read Our Full Story →</a>
+            </div>
+
+            <div class="story-media reveal-on-scroll">
+              <img src="/assets/images/stores/madukani.jpg" alt="Tuwano Boutique Interior" style="width: 100%; aspect-ratio: 16/11; object-fit: cover; border-radius: var(--radius-xs); box-shadow: 0 15px 35px rgba(0,0,0,0.08);" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Physical Store Locations -->
+      <section class="site-section stores-section">
+        <div class="container">
+          <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;" class="reveal-on-scroll">
+            <span class="section-kicker">Physical Boutiques</span>
+            <h2 class="section-title">Visit Our Stores</h2>
+            <p class="section-subtitle" style="margin: 0.75rem auto 0;">
+              Explore our collections and speak with our team in person at our Madukani or Mori locations.
+            </p>
+          </div>
+
+          <div class="stores-grid">
+            <!-- Madukani -->
+            <article class="store-card reveal-on-scroll">
+              <div class="store-card-img-wrap">
+                <img src="/assets/images/stores/madukani.jpg" alt="Tuwano Jewelleries Madukani Store" class="store-card-img" loading="lazy" />
+              </div>
+              <div class="store-card-body">
+                <span class="section-kicker">Location 01</span>
+                <h3 class="store-card-name">Madukani Store</h3>
+                <div class="store-meta-list">
+                  <div class="store-meta-row">
+                    <i data-lucide="clock"></i>
+                    <span>09:00 AM – 06:00 PM (Monday – Sunday)</span>
+                  </div>
+                  <div class="store-meta-row">
+                    <i data-lucide="phone"></i>
+                    <span>Direct Telephone: <a href="tel:0679323647">0679 323 647</a></span>
+                  </div>
+                  <div class="store-meta-row">
+                    <i data-lucide="sparkles"></i>
+                    <span>Services: Gold & Silver Jewellery, Ear Piercing, In-Store Enquiries</span>
+                  </div>
+                </div>
+                <div class="store-card-actions">
+                  <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Madukani%20Store%2C%20I%20would%20like%20to%20enquire%20about%20visiting%20today." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">
+                    WhatsApp Madukani
+                  </a>
+                  <a href="tel:0679323647" class="btn btn-secondary" style="padding: 0.875rem 1rem;" aria-label="Call Madukani Store">
+                    <i data-lucide="phone"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mori -->
+            <article class="store-card reveal-on-scroll">
+              <div class="store-card-img-wrap">
+                <img src="/assets/images/stores/mori.jpg" alt="Tuwano Jewelleries Mori Store" class="store-card-img" loading="lazy" />
+              </div>
+              <div class="store-card-body">
+                <span class="section-kicker">Location 02</span>
+                <h3 class="store-card-name">Mori Store</h3>
+                <div class="store-meta-list">
+                  <div class="store-meta-row">
+                    <i data-lucide="clock"></i>
+                    <span>09:00 AM – 07:30 PM (Monday – Sunday)</span>
+                  </div>
+                  <div class="store-meta-row">
+                    <i data-lucide="phone"></i>
+                    <span>Direct Telephone: <a href="tel:0652562875">0652 562 875</a></span>
+                  </div>
+                  <div class="store-meta-row">
+                    <i data-lucide="sparkles"></i>
+                    <span>Services: Gold & Silver Collections, Ring Sizing, Ear Piercing</span>
+                  </div>
+                </div>
+                <div class="store-card-actions">
+                  <a href="https://wa.me/255652562875?text=Hello%20Tuwano%20Mori%20Store%2C%20I%20would%20like%20to%20enquire%20about%20visiting%20today." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">
+                    WhatsApp Mori
+                  </a>
+                  <a href="tel:0652562875" class="btn btn-secondary" style="padding: 0.875rem 1rem;" aria-label="Call Mori Store">
+                    <i data-lucide="phone"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Social Section / Jewellery Journal (@tuwano_jewelleries) -->
+      <section class="site-section social-section">
+        <div class="container">
+          <div class="social-header-wrap reveal-on-scroll">
+            <span class="section-kicker">Curated Highlights</span>
+            <h2 class="section-title">JEWELLERY JOURNAL</h2>
+            <p style="color: var(--color-text-secondary); max-width: 540px; margin: 0.5rem auto 1.25rem; font-size: 0.9375rem;">
+              Moments of craftsmanship, ear curations, and fine precious metal highlights from our Madukani and Mori showcases.
+            </p>
+            <a href="https://www.instagram.com/tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="social-handle" aria-label="Visit Tuwano Jewelleries on Instagram">
+              <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/instagram/FF0069" class="social-brand-icon" alt="" aria-hidden="true" />
+              <span>Follow @tuwano_jewelleries on Instagram</span>
+            </a>
+          </div>
+
+          <div class="social-gallery-grid reveal-on-scroll">
+            <a href="https://www.instagram.com/tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="social-gallery-item" aria-label="Tuwano Jewellery highlights on Instagram">
+              <img src="/assets/images/products/gold_cuban_chain.jpg" alt="Tuwano gold chain highlight" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="social-gallery-item" aria-label="Tuwano Jewellery highlights on Instagram">
+              <img src="/assets/images/products/diamond_gold_ring.jpg" alt="Tuwano solitaire ring highlight" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="social-gallery-item" aria-label="Tuwano Jewellery highlights on Instagram">
+              <img src="/assets/images/piercing/piercing_curated_ear.jpg" alt="Tuwano ear styling highlight" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="social-gallery-item" aria-label="Tuwano Jewellery highlights on Instagram">
+              <img src="/assets/images/products/silver_cuff_bangle.jpg" alt="Tuwano sterling silver bangle highlight" loading="lazy" />
+            </a>
+          </div>
+
+          <section class="tuwano-testimonials reveal-on-scroll" aria-label="Customer testimonials" data-testimonials>
+            <div class="tuwano-testimonials-heading">
+              <span class="section-kicker">A Note From Our Clients</span>
+              <h2>Worn with joy. Remembered with love.</h2>
+            </div>
+            <div class="tuwano-testimonial-stage">
+              <div class="tuwano-testimonial-track">
+                <article class="tuwano-testimonial-slide is-active" data-testimonial-slide>
+                  <span class="tuwano-testimonial-quote" aria-hidden="true">“</span>
+                  <blockquote>“The piece I chose feels timeless and so personal. The whole experience was warm, thoughtful, and beautifully considered.”</blockquote>
+                  <div class="tuwano-testimonial-client"><strong>A Tuwano Client</strong><span>Dar es Salaam</span></div>
+                </article>
+                <article class="tuwano-testimonial-slide" data-testimonial-slide>
+                  <span class="tuwano-testimonial-quote" aria-hidden="true">“</span>
+                  <blockquote>“From the first moment, everything felt special. The jewellery is elegant without trying too hard, and I love how it catches the light.”</blockquote>
+                  <div class="tuwano-testimonial-client"><strong>A Tuwano Client</strong><span>Arusha</span></div>
+                </article>
+                <article class="tuwano-testimonial-slide" data-testimonial-slide>
+                  <span class="tuwano-testimonial-quote" aria-hidden="true">“</span>
+                  <blockquote>“I wanted something meaningful, and Tuwano helped me find exactly that. It now feels like a little part of my story that I can always wear.”</blockquote>
+                  <div class="tuwano-testimonial-client"><strong>A Tuwano Client</strong><span>Zanzibar</span></div>
+                </article>
+                <article class="tuwano-testimonial-slide" data-testimonial-slide>
+                  <span class="tuwano-testimonial-quote" aria-hidden="true">“</span>
+                  <blockquote>“Beautiful craftsmanship, a lovely welcome, and a piece I reach for again and again. It is the kind of jewellery that becomes part of you.”</blockquote>
+                  <div class="tuwano-testimonial-client"><strong>A Tuwano Client</strong><span>Mwanza</span></div>
+                </article>
+              </div>
+              <div class="tuwano-testimonial-controls">
+                <button type="button" class="tuwano-testimonial-arrow" data-testimonial-prev aria-label="Previous testimony">←</button>
+                <div class="tuwano-testimonial-dots" role="tablist" aria-label="Choose a customer testimony">
+                  <button type="button" class="is-active" data-testimonial-dot aria-label="Testimony 1"></button>
+                  <button type="button" data-testimonial-dot aria-label="Testimony 2"></button>
+                  <button type="button" data-testimonial-dot aria-label="Testimony 3"></button>
+                  <button type="button" data-testimonial-dot aria-label="Testimony 4"></button>
+                </div>
+                <button type="button" class="tuwano-testimonial-arrow" data-testimonial-next aria-label="Next testimony">→</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-brand-lockup">
+            <a href="/" aria-label="Tuwano Jewelleries Home">
+              <img src="assets/images/logo/tuwano-logo.svg" alt="Tuwano Jewellers" class="footer-logo-img" />
+            </a>
+            <p class="footer-brand-desc">
+              Gold and sterling silver jewellery and ear piercing services in Tanzania.
+            </p>
+            <div class="footer-social-row" aria-label="Tuwano social media">
+  <a href="https://www.instagram.com/tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Tuwano on Instagram"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/instagram/FF0069" class="social-brand-icon" alt="" aria-hidden="true" /></a>
+  <a href="https://www.tiktok.com/@tuwanojeweller?_r=1&_t=ZS-9ACAk6ydfTL" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Tuwano on TikTok"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/tiktok/000000" class="social-brand-icon" alt="" aria-hidden="true" /></a>
+  <a href="https://www.facebook.com/share/1Du5ghvJBj/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Tuwano on Facebook"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/facebook/1877F2" class="social-brand-icon" alt="" aria-hidden="true" /></a>
+  <a href="https://www.threads.com/@tuwano_jewelleries" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Tuwano on Threads"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/threads/000000" class="social-brand-icon" alt="" aria-hidden="true" /></a>
+</div>
+          </div>
+
+          <!-- Col 2: Navigation Links -->
+          <div>
+            <h4 class="footer-heading">Collections</h4>
+            <ul class="footer-link-list">
+              <li><a href="/shop.html" class="footer-link">All Jewellery</a></li>
+              <li><a href="/gold.html" class="footer-link">Gold Jewellery</a></li>
+              <li><a href="/silver.html" class="footer-link">Silver Jewellery</a></li>
+              <li><a href="/rings.html" class="footer-link">Rings</a></li>
+              <li><a href="/necklaces.html" class="footer-link">Necklaces & Chains</a></li>
+              <li><a href="/bracelets.html" class="footer-link">Bracelets & Bangles</a></li>
+              <li><a href="/earrings.html" class="footer-link">Earrings</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Services & Story -->
+          <div>
+            <h4 class="footer-heading">Tuwano</h4>
+            <ul class="footer-link-list">
+              <li><a href="/piercing.html" class="footer-link">Ear Piercing Studio</a></li>
+              <li><a href="/about.html" class="footer-link">About Brand</a></li>
+              <li><a href="/stores.html" class="footer-link">Store Locations</a></li>
+              <li><a href="/contact.html" class="footer-link">Contact & Inquiries</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Store Hours & Contacts -->
+          <div>
+            <h4 class="footer-heading">Physical Stores</h4>
+            <div class="footer-store-card">
+              <h5 class="footer-store-name">Madukani Store</h5>
+              <div class="footer-store-meta">
+                09:00 AM – 06:00 PM<br />
+                Phone: <a href="tel:0679323647">0679 323 647</a>
+              </div>
+            </div>
+
+            <div class="footer-store-card">
+              <h5 class="footer-store-name">Mori Store</h5>
+              <div class="footer-store-meta">
+                09:00 AM – 07:30 PM<br />
+                Phone: <a href="tel:0652562875">0652 562 875</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Tuwano Jewelleries. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <a href="/about.html" class="footer-link">Brand Philosophy</a>
+            <a href="/stores.html" class="footer-link">Boutique Directory</a>
+            <a href="/contact.html" class="footer-link">WhatsApp Concierge</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Overlay Modal -->
+    <div class="search-modal-overlay" id="search-overlay">
+      <div class="search-modal-card">
+        <div class="search-modal-header">
+          <div class="search-input-wrap">
+            <i data-lucide="search"></i>
+            <input type="text" id="search-input" class="search-input-field" placeholder="Search gold, silver, rings, chains..." autocomplete="off" />
+          </div>
+          <button type="button" id="search-clear-btn" style="display: none; font-size: 0.8125rem; color: var(--color-text-muted);">Clear</button>
+          <button type="button" class="drawer-close-btn" id="search-close-btn" aria-label="Close search"><i data-lucide="x"></i></button>
+        </div>
+
+        <div class="search-modal-body">
+          <div class="search-popular-tags" id="search-popular-tags">
+            <span style="font-size: 0.75rem; color: var(--color-text-muted); margin-right: 0.25rem;">Popular:</span>
+            <button type="button" class="search-tag-chip" data-query="Gold">Gold</button>
+            <button type="button" class="search-tag-chip" data-query="Silver">Silver</button>
+            <button type="button" class="search-tag-chip" data-query="Cuban">Cuban Chain</button>
+            <button type="button" class="search-tag-chip" data-query="Ring">Rings</button>
+            <button type="button" class="search-tag-chip" data-query="Piercing">Piercing</button>
+          </div>
+
+          <div style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin-bottom: 0.75rem;" id="search-results-count">
+            Suggestions
+          </div>
+
+          <div class="search-results-list" id="search-results-list"></div>
+          <div id="search-empty-state" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="drawer-overlay" id="cart-overlay"></div>
+    <div class="side-drawer" id="cart-drawer" aria-label="Selection Bag">
+      <div class="drawer-header">
+        <h3 class="drawer-title">Selection Bag</h3>
+        <button type="button" class="drawer-close-btn" id="cart-close-btn" aria-label="Close selection bag"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="drawer-body">
+        <div id="cart-empty-state" class="drawer-empty" style="display: flex;">
+          <i data-lucide="shopping-bag"></i>
+          <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-text-primary);">Your bag is currently empty.</p>
+          <span style="font-size: 0.875rem;">Explore our curated gold and silver collections to save pieces for enquiry.</span>
+          <a href="/shop.html" class="btn btn-secondary" style="margin-top: 1rem;">Explore Collection</a>
+        </div>
+
+        <div id="cart-drawer-items"></div>
+      </div>
+
+      <div class="drawer-footer" id="cart-drawer-footer" style="display: none;">
+        <div class="cart-store-picker">
+          <label for="cart-store-select">Select Preferred Store for Enquiry:</label>
+          <select id="cart-store-select">
+            <option value="madukani">Madukani Store (09:00 AM – 06:00 PM · 0679 323 647)</option>
+            <option value="mori">Mori Store (09:00 AM – 07:30 PM · 0652 562 875)</option>
+          </select>
+        </div>
+
+        <a href="#" id="cart-whatsapp-checkout-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+          <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+          Enquire Bag on WhatsApp
+        </a>
+        <p style="font-size: 0.6875rem; color: var(--color-text-muted); text-align: center; margin-top: 0.5rem;">
+          Our boutique specialists will review pieces with you directly on WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <!-- Wishlist Drawer -->
+    <div class="drawer-overlay" id="wishlist-overlay"></div>
+    <div class="side-drawer" id="wishlist-drawer" aria-label="Saved Items">
+      <div class="drawer-header">
+        <h3 class="drawer-title">Saved Pieces</h3>
+        <button type="button" class="drawer-close-btn" id="wishlist-close-btn" aria-label="Close saved items"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="drawer-body">
+        <div id="wishlist-empty-state" class="drawer-empty" style="display: flex;">
+          <i data-lucide="heart"></i>
+          <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-text-primary);">No saved pieces yet.</p>
+          <span style="font-size: 0.875rem;">Click the heart icon on any jewellery piece to save it for later viewing.</span>
+        </div>
+
+        <div id="wishlist-drawer-items"></div>
+      </div>
+
+      <div class="drawer-footer" id="wishlist-drawer-footer" style="display: none;">
+        <a href="#" id="wishlist-whatsapp-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick View Dialog Modal -->
+    <div class="drawer-overlay" id="quick-view-overlay"></div>
+    <div class="quick-view-dialog" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Product quick view">
+      <button type="button" class="qv-close-btn" id="quick-view-close" aria-label="Close quick view"><i data-lucide="x"></i></button>
+      <div id="quick-view-content"></div>
+    </div>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/255679323647?text=Hello%20Tuwano%20Jewelleries%2C%20I%20would%20like%20to%20enquire%20about%20your%20jewellery%20collections." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-widget" aria-label="Chat with Tuwano Jewelleries on WhatsApp">
+      <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/whatsapp/25D366" class="social-brand-icon" alt="" aria-hidden="true" />
+      <div class="floating-whatsapp-label">
+        <span class="floating-wa-main">Chat with Tuwano</span>
+        <span class="floating-wa-sub">Madukani & Mori Stores</span>
+      </div>
+    </a>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
